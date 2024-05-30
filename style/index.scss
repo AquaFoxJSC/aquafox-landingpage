@@ -1,0 +1,120 @@
+body {
+  --gradient: linear-gradient(117deg, #26b1ff 24.98%, #1557ff 80.23%);
+}
+
+.btn-contact-us {
+  display: flex;
+  height: 46px;
+  padding: 20px 24px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 2px;
+  background: var(--gradient);
+  color: #fff;
+}
+
+.landing-page {
+  h1 {
+    color: var(--Curious-Blue-950, #0f162f);
+    font-family: "Work Sans";
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 64px; /* 114.286% */
+    letter-spacing: -2.24px;
+    text-align: center;
+
+    .special-text {
+      background: var(--gradient);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+  .sub-title {
+    color: #3b404f;
+    font-family: "Work Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 31px; /* 155% */
+    letter-spacing: -0.72px;
+    text-align: center;
+    margin-top: 24px;
+  }
+  .expertise-section {
+    display: flex;
+    padding: var(----spacing-8xl, 80px);
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(180deg, #fff 0%, #f2f8ff 41.77%, #fff 100%);
+  }
+  .expertise-div {
+    width: 100%;
+    max-width: 1280px;
+  }
+  h2 {
+    text-align: center;
+    color: var(--Curious-Blue-950, #0f162f);
+    text-align: center;
+    font-family: "Work Sans";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 60px; /* 125% */
+    letter-spacing: -1.44px;
+  }
+  .expertise-items {
+    display: flex;
+    justify-content: space-between;
+    // gap: 100px
+  }
+  .ept-icon {
+    background: var(--gradient);
+    stroke-width: 1px;
+    stroke: #27b1ff;
+
+    backdrop-filter: blur(8px);
+    width: 64px;
+    height: 64px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
+  .ept-title {
+    color: #0836a1;
+    font-family: "Work Sans";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 60px; /* 150% */
+    letter-spacing: -1.2px;
+    margin-bottom: 13;
+    margin-top: 24px;
+  }
+  .ept-text {
+    color: var(--Neutral-Grey, #68718b);
+    font-family: "Work Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23px; /* 115% */
+    letter-spacing: -0.2px;
+  }
+  .ept-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 566px;
+
+    // &:first-child {
+    //     max-width: 566px;
+    // }
+    // &:nth-child(2) {
+    //     max-width: 566px;
+    // }
+  }
+}
