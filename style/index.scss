@@ -1,5 +1,6 @@
 body {
   --gradient: linear-gradient(117deg, #26b1ff 24.98%, #1557ff 80.23%);
+  font-family: "Work Sans", sans-serif;
 }
 
 .btn-contact-us {
@@ -14,6 +15,37 @@ body {
   color: #fff;
 }
 
+footer {
+  background: #2684ff;
+  display: flex;
+  justify-content: center;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--Curious-Blue-50, #f0f9ff);
+  font-family: Inter;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 31px; /* 238.462% */
+  letter-spacing: -0.325px;
+  padding: 10px 25px;
+}
+.social-group {
+  display: flex;
+  gap: 12px;
+}
+.social-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+}
+
 .landing-page {
   h1 {
     color: var(--Curious-Blue-950, #0f162f);
@@ -24,13 +56,13 @@ body {
     line-height: 64px; /* 114.286% */
     letter-spacing: -2.24px;
     text-align: center;
+  }
 
-    .special-text {
-      background: var(--gradient);
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
+  .special-text {
+    background: var(--gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   .sub-title {
     color: #3b404f;
@@ -65,11 +97,12 @@ body {
     line-height: 60px; /* 125% */
     letter-spacing: -1.44px;
   }
+
   .expertise-items {
     display: flex;
     justify-content: space-between;
-    // gap: 100px
   }
+
   .ept-icon {
     background: var(--gradient);
     stroke-width: 1px;
@@ -109,12 +142,131 @@ body {
     flex-direction: column;
     justify-content: center;
     max-width: 566px;
+    order: 2;
+  }
 
-    // &:first-child {
-    //     max-width: 566px;
-    // }
-    // &:nth-child(2) {
-    //     max-width: 566px;
-    // }
+  .expertise-flex-order {
+    .ept-info {
+      order: 1;
+    }
+    .ept-img {
+      order: 2;
+    }
+  }
+  .ept-img {
+    order: 1;
+  }
+
+  .contact-section {
+    background: linear-gradient(175deg, #fff 16.91%, #004eff 102.75%);
+    padding-top: 85px;
+    padding-bottom: 110px;
+    display: flex;
+    justify-content: center;
+  }
+  .contact-card {
+    display: flex;
+    max-width: 1044px;
+    height: 182px;
+    padding: var(----spacing-4xl, 32px) 86px;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: var(--radius-4xl, 24px);
+    border: 1px solid #7ac3ff;
+    background: #fff;
+    box-shadow: 0px 12px 30px 0px rgba(123, 184, 255, 0.15);
+    backdrop-filter: blur(50px);
+  }
+  .contact-title {
+    width: 705px;
+    color: var(--Curious-Blue-950, #0f162f);
+    font-family: "Work Sans";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 51px; /* 127.5% */
+    letter-spacing: -1.2px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .landing-page {
+    .expertise-section {
+      padding: 40px;
+    }
+    .expertise-div {
+      h2 {
+        margin-bottom: 20px;
+      }
+    }
+    .contact-card {
+      display: block;
+      height: auto;
+      .btn-contact-us {
+        margin-top: 20px;
+      }
+    }
+    .contact-title {
+      width: auto;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .landing-page {
+    .expertise-section {
+      padding: 16px;
+    }
+    h1 {
+      font-size: 48px;
+    }
+    .expertise-section {
+      h2 {
+        font-size: 36px;
+        margin-bottom: 14px;
+      }
+    }
+    .expertise-items {
+      display: block;
+      margin-bottom: 64px;
+    }
+    .ept-title {
+      font-size: 24px;
+      line-height: 60px;
+      margin-bottom: 12px;
+      margin-top: 0;
+    }
+    .ept-text {
+      font-size: 16px;
+      line-height: 23px; /* 143.75% */
+    }
+    .ept-img {
+      width: 100%;
+      order: 2;
+    }
+    .ept-info {
+      order: 1;
+    }
+    .ept-icon {
+      width: 40px;
+      height: 40px;
+      img {
+        width: 18px;
+        height: 18px;
+      }
+    }
+    .contact-card {
+      padding-left: 52px;
+      padding-right: 52px;
+      text-align: center;
+    }
+    .contact-title {
+      font-size: 24px;
+      text-align: center;
+    }
+    .div-btn-contact {
+      display: flex;
+      justify-content: center;
+    }
   }
 }

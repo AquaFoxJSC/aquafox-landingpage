@@ -12,19 +12,9 @@ import Image from "next/image";
 function Expertise() {
   return (
     <div className="expertise-section">
-      <div className="expertise-div">
+      <div className="expertise-div container">
         <h2>AquaFox’s Expertise</h2>
         <div className="expertise-items">
-          <div className="ept-img">
-            <Image
-              src="/images/expertise1.png"
-              alt="Vercel Logo"
-              className="expertise-img"
-              width={566}
-              height={619}
-              priority
-            />
-          </div>
           <div className="ept-info">
             <div className="ept-icon">
               <Image
@@ -42,8 +32,18 @@ function Expertise() {
               platforms.
             </div>
           </div>
+          <div className="ept-img">
+            <Image
+              src="/images/expertise1.png"
+              alt="Vercel Logo"
+              className="expertise-img"
+              width={566}
+              height={619}
+              priority
+            />
+          </div>
         </div>
-        <div className="expertise-items">
+        <div className="expertise-items expertise-flex-order">
           <div className="ept-info">
             <div className="ept-icon">
               <Image
@@ -72,16 +72,6 @@ function Expertise() {
           </div>
         </div>
         <div className="expertise-items">
-          <div className="ept-img">
-            <Image
-              src="/images/expertise1.png"
-              alt="Vercel Logo"
-              className="expertise-img"
-              width={566}
-              height={619}
-              priority
-            />
-          </div>
           <div className="ept-info">
             <div className="ept-icon">
               <Image
@@ -92,12 +82,21 @@ function Expertise() {
                 priority
               />
             </div>
-            <div className="ept-title">Premier Token Listing Services</div>
+            <div className="ept-title">Multiple Platform</div>
             <div className="ept-text">
-              Boost the visibility of your newly launched tokens by propelling
-              them into the top 10 on leading decentralized exchange (DEX)
-              platforms.
+              Simplify your DEX investments, making them as straightforward as
+              traditional stock market ventures.
             </div>
+          </div>
+          <div className="ept-img">
+            <Image
+              src="/images/expertise1.png"
+              alt="Vercel Logo"
+              className="expertise-img"
+              width={566}
+              height={619}
+              priority
+            />
           </div>
         </div>
       </div>
