@@ -220,7 +220,7 @@ footer {
       align-items: center;
 
       .our-works-title {
-        color: var(--Curious-Blue-950, #0F162F);
+        color: var(--Curious-Blue-950, #0f162f);
         text-align: center;
         font-family: "Work Sans";
         font-size: 48px;
@@ -232,7 +232,7 @@ footer {
       }
 
       .our-works-description {
-        color: var(--Neutral-Grey, #68718B);
+        color: var(--Neutral-Grey, #68718b);
         text-align: center;
         /* Body Medium */
         font-family: "Work Sans";
@@ -250,8 +250,26 @@ footer {
       max-width: 100%;
 
       .swiper-our-works-item {
-        background: red;
         min-height: 100px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        .work-image {
+          border-radius: 16px;
+          min-height: 312px;
+          border: 1px solid var(--Gray-100, #f2f4f7);
+          background: var(--Gray-100, #f2f4f7);
+        }
+        .work-title {
+          color: #000;
+          /* Text xl - 18px/Medium */
+          font-family: Inter;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 28px; /* 155.556% */
+          letter-spacing: -0.54px;
+        }
       }
     }
   }
@@ -267,7 +285,7 @@ footer {
       align-items: center;
 
       .our-clients-title {
-        color: var(--Curious-Blue-950, #0F162F);
+        color: var(--Curious-Blue-950, #0f162f);
         text-align: center;
         font-family: "Work Sans";
         font-size: 48px;
@@ -279,7 +297,7 @@ footer {
       }
 
       .our-clients-description {
-        color: var(--Neutral-Grey, #68718B);
+        color: var(--Neutral-Grey, #68718b);
         text-align: center;
         /* Body Medium */
         font-family: "Work Sans";
@@ -295,14 +313,88 @@ footer {
 
     .swiper-our-clients {
       max-width: 100%;
-      mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 25%, rgb(0, 0, 0) 75%, rgba(0, 0, 0, 0) 100%);
+      mask-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0) 0%,
+        rgb(0, 0, 0) 25%,
+        rgb(0, 0, 0) 75%,
+        rgba(0, 0, 0, 0) 100%
+      );
       .swiper-our-clients-item {
         background: #2684ff;
-        min-height: 100px;
+        height: 312px;
+        padding: 32px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 32px;
+        border-radius: 24px;
+        background: rgba(255, 255, 255, 0.5);
+        box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.05);
+        backdrop-filter: blur(25px);
+        .client-answer {
+          color: #101828;
+          font-family: "Work Sans";
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 140%; /* 28px */
+          letter-spacing: -0.72px;
+          overflow: hidden;
+        }
+        .client-information {
+          display: flex;
+          gap: 16px;
+          height: 48px;
+          .client-avatar {
+            height: 100%;
+            width: 48px;
+          }
+          .client-detail {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .client-name {
+              color: #101828;
+              /* Text base - 16px/Semibold */
+              font-family: Inter;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 24px; /* 150% */
+              letter-spacing: -0.48px;
+            }
+            .client-position {
+              overflow: hidden;
+              color: #475467;
+              text-overflow: ellipsis;
+              /* Text sm - 14px/Regular */
+              font-family: Inter;
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 20px; /* 142.857% */
+              letter-spacing: -0.42px;
+            }
+          }
+        }
       }
     }
 
-    .our-clients-pagination {}
+    .our-clients-pagination {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      .custom-button {
+        height: 48px;
+        width: 48px;
+        border-radius: 12px;
+        background: #f2f4f7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
   }
 }
 

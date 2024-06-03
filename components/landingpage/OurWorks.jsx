@@ -2,11 +2,11 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import 'swiper/css/grid';
+import "swiper/css/grid";
 // import 'swiper/css/pagination'
 // import 'swiper/css/navigation'
 // Pagination
-import { Grid } from 'swiper/modules';
+import { Grid, Autoplay } from "swiper/modules";
 
 function OurWorks() {
   return (
@@ -19,20 +19,62 @@ function OurWorks() {
       </div>
       <Swiper
         className="swiper-our-works"
-        slidesPerView={3}
+        slidesPerView={1.2}
         grid={{
-          rows: 2,
+          rows: 1,
           fill: "row",
         }}
-        spaceBetween={32}
-        modules={[Grid]}
+        autoplay={{
+          delay: 2000,
+          disableOnInteraction: false,
+        }}
+        centeredSlides={true}
+        spaceBetween={12}
+        modules={[Grid, Autoplay]}
+        breakpoints={{
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 32,
+            fill: "row",
+            rows: 2,
+          },
+        }}
       >
-        <SwiperSlide className="swiper-our-works-item">Slide 1</SwiperSlide>
-        <SwiperSlide className="swiper-our-works-item">Slide 2</SwiperSlide>
-        <SwiperSlide className="swiper-our-works-item">Slide 3</SwiperSlide>
-        <SwiperSlide className="swiper-our-works-item">Slide 4</SwiperSlide>
-        <SwiperSlide className="swiper-our-works-item">Slide 5</SwiperSlide>
-        <SwiperSlide className="swiper-our-works-item">Slide 6</SwiperSlide>
+        <SwiperSlide className="swiper-our-works-item">
+          <div className="work-image"></div>
+          <div className="work-title">
+            Decentralized Exchange & Aggregator - Auto Trading Bot, provide
+            traders with the best token prices.
+          </div>
+        </SwiperSlide>
+        <SwiperSlide className="swiper-our-works-item">
+          <div className="work-image"></div>
+          <div className="work-title">Game Fi - Earn-fi Platform</div>
+        </SwiperSlide>
+        <SwiperSlide className="swiper-our-works-item">
+          <div className="work-image"></div>
+          <div className="work-title">
+            Crypto Wallet - A convenient and secure wallet
+          </div>
+        </SwiperSlide>
+        <SwiperSlide className="swiper-our-works-item">
+          <div className="work-image"></div>
+          <div className="work-title">
+            Decentralized Exchange & Aggregator - Auto Trading Bot, provide
+            traders with the best token prices.
+          </div>
+        </SwiperSlide>
+        <SwiperSlide className="swiper-our-works-item">
+          <div className="work-image"></div>
+          <div className="work-title">
+            Decentralized Exchange & Aggregator - Auto Trading Bot, provide
+            traders with the best token prices.
+          </div>
+        </SwiperSlide>
+        <SwiperSlide className="swiper-our-works-item">
+          <div className="work-image"></div>
+          <div className="work-title">HolaMate - Donate KOL and wallet NFT</div>
+        </SwiperSlide>
       </Swiper>
     </div>
   );
