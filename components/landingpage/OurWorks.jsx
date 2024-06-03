@@ -10,7 +10,7 @@ import { Grid, Autoplay } from "swiper/modules";
 
 function OurWorks() {
   return (
-    <div className="container our-works-block mx-auto mt-[80px]">
+    <div className="expertise-section our-works-block mx-auto mt-[80px]">
       <div className="our-works-header text-center">
         <h2 className="our-works-title">Our Works</h2>
         <p className="our-works-description mt-[24px]">

@@ -10,7 +10,7 @@ function OurClients() {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
   return (
-    <div className="container expertise-section mx-auto our-clients-block mt-[136px]">
+    <div className="expertise-section mx-auto our-clients-block mt-[136px]">
       <div className="our-clients-header text-center">
         <h2 className="our-clients-title">Hear from Our Satisfied Clients</h2>
         <p className="our-clients-description mt-[24px]">
