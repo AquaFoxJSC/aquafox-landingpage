@@ -20,7 +20,7 @@ function OurWorks() {
           </p>
         </div>
         <Swiper
-          className="swiper-our-works mt-[64px]"
+          className="swiper-our-works"
           slidesPerView={1.2}
           loop={true}
           grid={{

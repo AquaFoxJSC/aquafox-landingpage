@@ -23,7 +23,7 @@ function OurClients() {
     }
   }, []);
   return (
-    <div className="expertise-section mx-auto our-clients-block mt-[96px]">
+    <div className="expertise-section mx-auto our-clients-block">
       <div className="expertise-div container">
         <div className="our-clients-header text-center">
           <h2 className="our-clients-title">OUR SATISFIED CUSTOMERS</h2>

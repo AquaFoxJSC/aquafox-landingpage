@@ -26,7 +26,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   color: var(--Curious-Blue-50, #f0f9ff);
-  font-family: Inter;
+  // font-family: Inter;
   font-size: 13px;
   font-style: normal;
   font-weight: 500;
@@ -231,6 +231,7 @@ footer {
         line-height: 60px;
         /* 125% */
         letter-spacing: -1.44px;
+        margin-bottom: 0;
       }
 
       .our-works-description {
@@ -250,28 +251,33 @@ footer {
 
     .swiper-our-works {
       max-width: 100%;
+      margin-top: 64px;
 
       .swiper-our-works-item {
         max-width: 600px;
         display: flex;
         flex-direction: column;
         gap: 24px;
+
         .work-image {
           border-radius: 16px;
           border: 1px solid var(--Gray-100, #f2f4f7);
           background: var(--Gray-100, #f2f4f7);
+
           img {
             width: 100%;
             height: auto;
-            
+
           }
         }
+
         .work-title {
           color: #000;
           font-size: 18px;
           font-style: normal;
           font-weight: 500;
-          line-height: 28px; /* 155.556% */
+          line-height: 28px;
+          /* 155.556% */
           letter-spacing: -0.54px;
         }
       }
@@ -284,6 +290,7 @@ footer {
     gap: 64px;
     padding-top: 0;
     padding-bottom: 0;
+    margin-top: 96px;
 
     .our-clients-header {
       display: flex;
@@ -300,6 +307,7 @@ footer {
         line-height: 60px;
         /* 125% */
         letter-spacing: -1.44px;
+        margin-bottom: 0;
       }
 
       .our-clients-description {
@@ -319,16 +327,15 @@ footer {
 
     .swiper-our-clients {
       max-width: 100%;
-      mask-image: linear-gradient(
-        to right,
-        rgba(0, 0, 0, 0) 0%,
-        rgb(0, 0, 0) 25%,
-        rgb(0, 0, 0) 75%,
-        rgba(0, 0, 0, 0) 100%
-      );
+      mask-image: linear-gradient(to right,
+          rgba(0, 0, 0, 0) 0%,
+          rgb(0, 0, 0) 25%,
+          rgb(0, 0, 0) 75%,
+          rgba(0, 0, 0, 0) 100%);
+
       .swiper-our-clients-item {
         background: #2684ff;
-        height: 312px;
+        height: 321px;
         padding: 32px;
         display: flex;
         flex-direction: column;
@@ -338,28 +345,35 @@ footer {
         background: rgba(255, 255, 255, 0.5);
         box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.05);
         backdrop-filter: blur(25px);
+        margin-top: 64px;
+
         .client-answer {
           color: #101828;
           font-family: "Work Sans";
           font-size: 20px;
           font-style: normal;
           font-weight: 400;
-          line-height: 140%; /* 28px */
+          line-height: 140%;
+          /* 28px */
           letter-spacing: -0.72px;
           overflow: hidden;
         }
+
         .client-information {
           display: flex;
           gap: 16px;
           height: 48px;
+
           .client-avatar {
             height: 100%;
             width: 48px;
           }
+
           .client-detail {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+
             .client-name {
               color: #101828;
               /* Text base - 16px/Semibold */
@@ -367,9 +381,11 @@ footer {
               font-size: 16px;
               font-style: normal;
               font-weight: 600;
-              line-height: 24px; /* 150% */
+              line-height: 24px;
+              /* 150% */
               letter-spacing: -0.48px;
             }
+
             .client-position {
               overflow: hidden;
               color: #475467;
@@ -379,7 +395,8 @@ footer {
               font-size: 14px;
               font-style: normal;
               font-weight: 400;
-              line-height: 20px; /* 142.857% */
+              line-height: 20px;
+              /* 142.857% */
               letter-spacing: -0.42px;
             }
           }
@@ -391,6 +408,7 @@ footer {
       display: flex;
       gap: 12px;
       justify-content: center;
+
       .custom-button {
         height: 48px;
         width: 48px;
@@ -499,6 +517,132 @@ footer {
     .div-btn-contact {
       display: flex;
       justify-content: center;
+    }
+
+    .our-works-block {
+      .our-works-header {
+        .our-works-title {
+          color: var(--Curious-Blue-950, #0F162F);
+          text-align: center;
+          font-family: "Work Sans";
+          font-size: 48px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 60px;
+          /* 125% */
+          letter-spacing: -1.44px;
+        }
+
+        .our-works-description {
+          color: var(--Neutral-Grey, #68718B);
+          text-align: center;
+          /* Body Medium */
+          font-family: "Work Sans";
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 23px;
+          /* 143.75% */
+          letter-spacing: -0.16px;
+        }
+      }
+
+      .swiper-our-works {
+        margin-top: 22px;
+
+        .swiper-our-works-item {
+          .work-title {
+            color: #000;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 22.19px;
+            /* 158.5% */
+            letter-spacing: -0.42px;
+          }
+        }
+      }
+    }
+
+    .our-clients-block {
+      margin-top: 33px;
+
+      .our-clients-header {
+        .our-clients-title {
+          color: var(--Curious-Blue-950, #0F162F);
+          text-align: center;
+          font-family: "Work Sans";
+          font-size: 36px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 60px;
+          /* 166.667% */
+          letter-spacing: -1.08px;
+        }
+
+        .our-clients-description {
+          color: var(--Neutral-Grey, #68718B);
+          text-align: center;
+          font-family: "Work Sans";
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 23px;
+          /* 143.75% */
+          letter-spacing: -0.16px;
+        }
+      }
+
+      .swiper-our-clients {
+        mask-image: unset;
+
+        .swiper-our-clients-item {
+          margin-top: 30px;
+
+          .client-answer {
+            color: var(--Basic-elements-Text---text-primary, #101828);
+            font-family: "Work Sans";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 140%;
+            /* 22.4px */
+            letter-spacing: -0.576px;
+          }
+
+          .client-information {
+            .client-detail {
+
+
+              .client-name {
+                color: var(--Basic-elements-Text---text-primary, #101828);
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 24px;
+                /* 171.429% */
+                letter-spacing: -0.42px;
+              }
+
+              .client-position {
+                overflow: hidden;
+                color: var(--Basic-elements-Text---text-secondary, #475467);
+                text-overflow: ellipsis;
+                font-size: 10px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 20px;
+                /* 200% */
+                letter-spacing: -0.3px;
+              }
+            }
+          }
+        }
+      }
+
+      .our-clients-pagination {
+        display: none;
+      }
     }
   }
 }
