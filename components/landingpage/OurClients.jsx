@@ -14,12 +14,12 @@ function OurClients() {
         </p>
       </div>
       <Swiper className="swiper-our-clients" slidesPerView={3} spaceBetween={32}>
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
+        <SwiperSlide className="swiper-our-clients-item">Slide 1</SwiperSlide>
+        <SwiperSlide className="swiper-our-clients-item">Slide 2</SwiperSlide>
+        <SwiperSlide className="swiper-our-clients-item">Slide 3</SwiperSlide>
+        <SwiperSlide className="swiper-our-clients-item">Slide 4</SwiperSlide>
+        <SwiperSlide className="swiper-our-clients-item">Slide 5</SwiperSlide>
+        <SwiperSlide className="swiper-our-clients-item">Slide 6</SwiperSlide>
       </Swiper>
       <div className="our-clients-pagination text-center">pagination</div>
     </div>

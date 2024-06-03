@@ -213,6 +213,7 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 64px;
+
     .our-works-header {
       display: flex;
       flex-direction: column;
@@ -244,8 +245,14 @@ footer {
         max-width: 720px;
       }
     }
+
     .swiper-our-works {
       max-width: 100%;
+
+      .swiper-our-works-item {
+        background: red;
+        min-height: 100px;
+      }
     }
   }
 
@@ -289,6 +296,10 @@ footer {
     .swiper-our-clients {
       max-width: 100%;
       mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 25%, rgb(0, 0, 0) 75%, rgba(0, 0, 0, 0) 100%);
+      .swiper-our-clients-item {
+        background: #2684ff;
+        min-height: 100px;
+      }
     }
 
     .our-clients-pagination {}
