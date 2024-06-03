@@ -60,8 +60,8 @@ function OurWorks() {
               />
             </div>
             <div className="work-title">
-              Decentralized Exchange & Aggregator - Auto Trading Bot, provide
-              traders with the best token prices.
+              Decentralized Exchange & Aggregator - Auto Trading Bot with best
+              token prices.
             </div>
           </SwiperSlide>
           <SwiperSlide className="swiper-our-works-item">
@@ -101,8 +101,8 @@ function OurWorks() {
               />
             </div>
             <div className="work-title">
-              Insurance - A permissioned blockchain for AIA Insurance using
-              Hyperledger Fabric
+              Centralized Exchange - A global crypto exchange platform with 0%
+              transaction fee for major pairs
             </div>
           </SwiperSlide>
           <SwiperSlide className="swiper-our-works-item">
