@@ -183,6 +183,27 @@ footer {
     justify-content: center;
   }
 
+  .contact-img-left {
+    top: -90px;
+    left: 0;
+  }
+
+  .contact-img-right {
+    bottom: 0;
+    right: 0;
+  }
+
+  .contact-cont {
+    position: relative;
+    overflow: hidden;
+    padding-top: 120px;
+  }
+
+  .contact-img {
+    position: absolute;
+    z-index: 1;
+  }
+
   .contact-card {
     display: flex;
     max-width: 1044px;
@@ -195,6 +216,8 @@ footer {
     background: #fff;
     box-shadow: 0px 12px 30px 0px rgba(123, 184, 255, 0.15);
     backdrop-filter: blur(50px);
+    position: relative;
+    z-index: 2;
   }
 
   .contact-title {
@@ -267,7 +290,6 @@ footer {
           img {
             width: 100%;
             height: auto;
-
           }
         }
 
@@ -327,11 +349,13 @@ footer {
 
     .swiper-our-clients {
       max-width: 100%;
-      mask-image: linear-gradient(to right,
-          rgba(0, 0, 0, 0) 0%,
-          rgb(0, 0, 0) 25%,
-          rgb(0, 0, 0) 75%,
-          rgba(0, 0, 0, 0) 100%);
+      mask-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0) 0%,
+        rgb(0, 0, 0) 25%,
+        rgb(0, 0, 0) 75%,
+        rgba(0, 0, 0, 0) 100%
+      );
 
       .swiper-our-clients-item {
         background: #2684ff;
@@ -446,10 +470,29 @@ footer {
     .contact-title {
       width: auto;
     }
+
+    .contact-img-left {
+      top: 40px;
+      img {
+        width: 246px;
+        height: 304px;
+      }
+    }
+
+    .contact-img-right {
+      img {
+        width: 224px;
+        height: 176px;
+      }
+    }
   }
 }
 
 @media screen and (max-width: 768px) {
+  .footer {
+    display: block;
+    justify-content: center;
+  }
   .landing-page {
     .expertise-section {
       padding: 16px;
@@ -507,6 +550,8 @@ footer {
       padding-left: 52px;
       padding-right: 52px;
       text-align: center;
+      backdrop-filter: none;
+      max-width: 98%;
     }
 
     .contact-title {
@@ -522,7 +567,7 @@ footer {
     .our-works-block {
       .our-works-header {
         .our-works-title {
-          color: var(--Curious-Blue-950, #0F162F);
+          color: var(--Curious-Blue-950, #0f162f);
           text-align: center;
           font-family: "Work Sans";
           font-size: 48px;
@@ -534,7 +579,7 @@ footer {
         }
 
         .our-works-description {
-          color: var(--Neutral-Grey, #68718B);
+          color: var(--Neutral-Grey, #68718b);
           text-align: center;
           /* Body Medium */
           font-family: "Work Sans";
@@ -569,7 +614,7 @@ footer {
 
       .our-clients-header {
         .our-clients-title {
-          color: var(--Curious-Blue-950, #0F162F);
+          color: var(--Curious-Blue-950, #0f162f);
           text-align: center;
           font-family: "Work Sans";
           font-size: 36px;
@@ -581,7 +626,7 @@ footer {
         }
 
         .our-clients-description {
-          color: var(--Neutral-Grey, #68718B);
+          color: var(--Neutral-Grey, #68718b);
           text-align: center;
           font-family: "Work Sans";
           font-size: 16px;
@@ -612,8 +657,6 @@ footer {
 
           .client-information {
             .client-detail {
-
-
               .client-name {
                 color: var(--Basic-elements-Text---text-primary, #101828);
                 font-size: 14px;

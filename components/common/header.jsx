@@ -11,7 +11,7 @@ import Image from "next/image";
 
 function Header() {
   return (
-    <Navbar className="py-[16px]" maxWidth="xl">
+    <Navbar className="py-[16px] bg-white" maxWidth="xl">
       <NavbarBrand>
         <Image
           src="/images/logo.png"
