@@ -11,7 +11,8 @@ import Image from "next/image";
 
 function OurWorks() {
   return (
-    <div className="expertise-section our-works-block mx-auto mt-[80px]">
+    // mt-[80px]
+    <div className="expertise-section our-works-block mx-auto">
       <div className="expertise-div container">
         <div className="our-works-header text-center">
           <h2 className="our-works-title">Our Works</h2>
@@ -104,10 +105,10 @@ function OurWorks() {
               Hyperledger Fabric
             </div>
           </SwiperSlide>
-          {/* <SwiperSlide className="swiper-our-works-item">
+          <SwiperSlide className="swiper-our-works-item">
             <div className="work-image">
               <Image
-                src="/images/our-works/our-works_5.png"
+                src="/images/our-works/our-works_1.png"
                 alt="our-works"
                 width={400}
                 height={312}
@@ -118,7 +119,7 @@ function OurWorks() {
               Insurance - A permissioned blockchain for AIA Insurance using
               Hyperledger Fabric
             </div>
-          </SwiperSlide> */}
+          </SwiperSlide>
           <SwiperSlide className="swiper-our-works-item">
             <div className="work-image">
               <Image

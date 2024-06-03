@@ -1,14 +1,6 @@
 import React from "react";
-import {
-  Navbar,
-  NavbarBrand,
-  NavbarContent,
-  NavbarItem,
-  Link,
-  Button,
-} from "@nextui-org/react";
-import Image from "next/image";
 import { emailIcon, tgIcon, xIcon } from "../../constant/svg/index";
+import Link from "next/link";
 
 function Footer() {
   return (
@@ -19,9 +11,33 @@ function Footer() {
           reserved.
         </div>
         <div className="social-group">
-          <div className="social-item">{tgIcon}</div>
-          <div className="social-item">{emailIcon}</div>
-          <div className="social-item">{xIcon}</div>
+          <div className="social-item">
+            <Link
+              href="https://t.me/bmkelvin"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {tgIcon}
+            </Link>
+          </div>
+          <div className="social-item">
+            <Link
+              href="mailto:connect@aquafox.io"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {emailIcon}
+            </Link>
+          </div>
+          <div className="social-item">
+            <Link
+              href="https://twitter.com/AquaFoxJsc"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {xIcon}
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
