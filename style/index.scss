@@ -213,6 +213,8 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 64px;
+    padding-top: 0;
+    padding-bottom: 0;
 
     .our-works-header {
       display: flex;
@@ -250,20 +252,22 @@ footer {
       max-width: 100%;
 
       .swiper-our-works-item {
-        min-height: 100px;
+        max-width: 600px;
         display: flex;
         flex-direction: column;
         gap: 24px;
         .work-image {
           border-radius: 16px;
-          min-height: 312px;
           border: 1px solid var(--Gray-100, #f2f4f7);
           background: var(--Gray-100, #f2f4f7);
+          img {
+            width: 100%;
+            height: auto;
+            
+          }
         }
         .work-title {
           color: #000;
-          /* Text xl - 18px/Medium */
-          font-family: Inter;
           font-size: 18px;
           font-style: normal;
           font-weight: 500;
@@ -278,6 +282,8 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 64px;
+    padding-top: 0;
+    padding-bottom: 0;
 
     .our-clients-header {
       display: flex;
@@ -357,7 +363,7 @@ footer {
             .client-name {
               color: #101828;
               /* Text base - 16px/Semibold */
-              font-family: Inter;
+              // font-family: Inter;
               font-size: 16px;
               font-style: normal;
               font-weight: 600;
@@ -369,7 +375,7 @@ footer {
               color: #475467;
               text-overflow: ellipsis;
               /* Text sm - 14px/Regular */
-              font-family: Inter;
+              // font-family: Inter;
               font-size: 14px;
               font-style: normal;
               font-weight: 400;
