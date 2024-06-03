@@ -13,6 +13,11 @@ body {
   border-radius: 2px;
   background: var(--gradient);
   color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.32px;
 }
 
 footer {
@@ -62,7 +67,18 @@ footer {
     letter-spacing: -2.24px;
     text-align: center;
   }
-
+  .hero-img {
+    display: flex;
+    justify-content: center;
+    margin-top: -100px;
+  }
+  .hero-section {
+    background-image: url(/images/hero/hero-bg.png);
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 96px;
+  }
   .special-text {
     background: var(--gradient);
     background-clip: text;
@@ -86,6 +102,7 @@ footer {
   .expertise-section {
     display: flex;
     padding: var(----spacing-8xl, 80px);
+    padding-top: 96px;
     flex-direction: column;
     align-items: center;
     background: linear-gradient(180deg, #fff 0%, #f2f8ff 41.77%, #fff 100%);
@@ -112,6 +129,8 @@ footer {
   .expertise-items {
     display: flex;
     justify-content: space-between;
+    padding-top: 64px;
+    padding-bottom: 64px;
   }
 
   .ept-icon {
@@ -181,6 +200,8 @@ footer {
     padding-bottom: 110px;
     display: flex;
     justify-content: center;
+    padding-left: 52px;
+    padding-right: 52px;
   }
 
   .contact-img-left {
@@ -312,8 +333,8 @@ footer {
     gap: 64px;
     padding-top: 0;
     padding-bottom: 0;
-    margin-top: 96px;
-    background-image: url('/images/our-clients/background.png');
+    padding-top: 96px;
+    background-image: url("/images/our-clients/background.png");
     background-position: bottom right;
     background-size: 50% 100%;
     background-repeat: no-repeat;
@@ -454,7 +475,10 @@ footer {
   .landing-page {
     .expertise-section {
       padding: 40px;
+      padding-top: 96px;
     }
+
+    
 
     .expertise-div {
       h2 {
@@ -492,12 +516,18 @@ footer {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .footer {
     display: block;
     justify-content: center;
   }
   .landing-page {
+    .hero-section {
+      padding-top: 0;
+    }
+    .hero-section {
+      margin-top: 0;
+    }
     .expertise-section {
       padding: 16px;
     }
@@ -515,7 +545,8 @@ footer {
 
     .expertise-items {
       display: block;
-      margin-bottom: 64px;
+      margin-bottom: 0;
+      padding-bottom: 0;
     }
 
     .ept-title {
@@ -534,6 +565,12 @@ footer {
     .ept-img {
       width: 100%;
       order: 2;
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      img {
+        width: 80%;
+      }
     }
 
     .ept-info {
@@ -551,8 +588,8 @@ footer {
     }
 
     .contact-card {
-      padding-left: 52px;
-      padding-right: 52px;
+      padding-left: 30px;
+      padding-right: 30px;
       text-align: center;
       backdrop-filter: none;
       max-width: 98%;
@@ -691,5 +728,8 @@ footer {
         display: none;
       }
     }
+  }
+  .social-group {
+    justify-content: center;
   }
 }

@@ -11,7 +11,7 @@ import Image from "next/image";
 
 function Expertise() {
   return (
-    <div className="expertise-section">
+    <div  id="services" className="expertise-section">
       <div className="expertise-div container">
         <h2>AquaFox’s Expertise</h2>
         <div className="expertise-items">
@@ -34,11 +34,11 @@ function Expertise() {
           </div>
           <div className="ept-img">
             <Image
-              src="/images/expertise1.png"
+              src="/images/expertise/expertise1.png"
               alt="Vercel Logo"
               className="expertise-img"
-              width={566}
-              height={619}
+              width={395}
+              height={344}
               priority
             />
           </div>
@@ -62,11 +62,11 @@ function Expertise() {
           </div>
           <div className="ept-img">
             <Image
-              src="/images/expertise1.png"
+              src="/images/expertise/expertise2.png"
               alt="Vercel Logo"
               className="expertise-img"
-              width={566}
-              height={619}
+              width={380}
+              height={351}
               priority
             />
           </div>
@@ -90,11 +90,11 @@ function Expertise() {
           </div>
           <div className="ept-img">
             <Image
-              src="/images/expertise1.png"
+              src="/images/expertise/expertise3.png"
               alt="Vercel Logo"
               className="expertise-img"
-              width={566}
-              height={619}
+              width={324}
+              height={363}
               priority
             />
           </div>

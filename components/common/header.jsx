@@ -16,7 +16,6 @@ function Header() {
         <Image
           src="/images/logo.png"
           alt="Vercel Logo"
-          className="dark:invert"
           width={250}
           height={46}
           priority
@@ -24,17 +23,17 @@ function Header() {
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
-          <Link color="foreground" href="#">
+          <Link color="foreground" href="#home">
             Home
           </Link>
         </NavbarItem>
-        <NavbarItem isActive>
-          <Link href="#" aria-current="page">
-            Service
+        <NavbarItem >
+          <Link href="#services" aria-current="page">
+            Services
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#">
+          <Link color="foreground" href="#partner">
             Partner
           </Link>
         </NavbarItem>
