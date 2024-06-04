@@ -519,6 +519,10 @@ footer {
 }
 
 @media screen and (max-width: 767px) {
+  .btn-contact-us {
+    height: 36px;
+    padding: 0 10px;
+  }
   .footer {
     display: block;
     justify-content: center;
@@ -658,7 +662,7 @@ footer {
 
     .our-clients-block {
       margin-top: 33px;
-      background-image: url("/images/our-clients/background_mobile.png");
+      background-image: url("/images/our-clients/background.png");
 
       .our-clients-header {
         .our-clients-title {

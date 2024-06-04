@@ -19,7 +19,13 @@ function Contact() {
             <div className="special-text">Superior Technological Solution</div>
           </div>
           <div className="div-btn-contact">
-            <button className="btn-contact-us">Contact Us</button>
+            <Link
+              href="https://t.me/AquaFoxJSC"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="btn-contact-us">Contact Us</button>
+            </Link>
           </div>
         </div>
       </div>

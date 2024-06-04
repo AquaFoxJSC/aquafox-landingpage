@@ -27,7 +27,7 @@ function Header() {
             Home
           </Link>
         </NavbarItem>
-        <NavbarItem >
+        <NavbarItem>
           <Link href="#services" aria-current="page">
             Services
           </Link>
@@ -40,13 +40,17 @@ function Header() {
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem>
-          <button className="btn-contact-us">
-            Contact Us
-          </button>
+          <Link
+            href="https://t.me/AquaFoxJSC"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="btn-contact-us">Contact Us</button>
+          </Link>
         </NavbarItem>
       </NavbarContent>
     </Navbar>
   );
 }
 
-export default Header
+export default Header;
