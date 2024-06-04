@@ -108,7 +108,7 @@ function OurWorks() {
           <SwiperSlide className="swiper-our-works-item">
             <div className="work-image">
               <Image
-                src="/images/our-works/our-works_1.png"
+                src="/images/our-works/our-works_5.png"
                 alt="our-works"
                 width={400}
                 height={312}
