@@ -67,11 +67,13 @@ footer {
     letter-spacing: -2.24px;
     text-align: center;
   }
+
   .hero-img {
     display: flex;
     justify-content: center;
     margin-top: -100px;
   }
+
   .hero-section {
     background-image: url(/images/hero/hero-bg.png);
     background-position: 100% 100%;
@@ -79,6 +81,7 @@ footer {
     background-size: cover;
     padding-top: 96px;
   }
+
   .special-text {
     background: var(--gradient);
     background-clip: text;
@@ -374,13 +377,11 @@ footer {
 
     .swiper-our-clients {
       max-width: 100%;
-      mask-image: linear-gradient(
-        to right,
-        rgba(0, 0, 0, 0) 0%,
-        rgb(0, 0, 0) 25%,
-        rgb(0, 0, 0) 75%,
-        rgba(0, 0, 0, 0) 100%
-      );
+      mask-image: linear-gradient(to right,
+          rgba(0, 0, 0, 0) 0%,
+          rgb(0, 0, 0) 25%,
+          rgb(0, 0, 0) 75%,
+          rgba(0, 0, 0, 0) 100%);
 
       .swiper-our-clients-item {
         background: #2684ff;
@@ -478,7 +479,7 @@ footer {
       padding-top: 96px;
     }
 
-    
+
 
     .expertise-div {
       h2 {
@@ -501,6 +502,7 @@ footer {
 
     .contact-img-left {
       top: 40px;
+
       img {
         width: 246px;
         height: 304px;
@@ -521,13 +523,16 @@ footer {
     display: block;
     justify-content: center;
   }
+
   .landing-page {
     .hero-section {
       padding-top: 0;
     }
+
     .hero-section {
       margin-top: 0;
     }
+
     .expertise-section {
       padding: 16px;
     }
@@ -568,6 +573,7 @@ footer {
       display: flex;
       justify-content: center;
       margin-top: 20px;
+
       img {
         width: 80%;
       }
@@ -652,6 +658,7 @@ footer {
 
     .our-clients-block {
       margin-top: 33px;
+      background-image: url("/images/our-clients/background_mobile.png");
 
       .our-clients-header {
         .our-clients-title {
@@ -729,6 +736,7 @@ footer {
       }
     }
   }
+
   .social-group {
     justify-content: center;
   }
