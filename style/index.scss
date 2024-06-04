@@ -667,7 +667,7 @@ footer {
 
     .our-clients-block {
       margin-top: 33px;
-      background-image: url("/images/our-clients/background.png");
+      background-image: url("/images/our-clients/background_mobile.png");
 
       .our-clients-header {
         .our-clients-title {
@@ -700,6 +700,7 @@ footer {
 
         .swiper-our-clients-item {
           margin-top: 30px;
+          height: 320px;
 
           .client-answer {
             color: var(--Basic-elements-Text---text-primary, #101828);
