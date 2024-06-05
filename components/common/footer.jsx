@@ -67,7 +67,7 @@ function Footer() {
       </div>
       <div className="container footer">
         <div className="text-center">
-          Copyright ©{new Date().getFullYear()} Flex AquaFox, JSC. All rights
+          Copyright ©{new Date().getFullYear()} AquaFox, JSC. All rights
           reserved.
         </div>
       </div>

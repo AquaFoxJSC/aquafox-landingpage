@@ -75,7 +75,7 @@ function Expertise() {
           <div className="ept-info">
             <div className="ept-icon">
               <Image
-                src="/images/icons/service-icon.png"
+                src="/images/icons/flatform-icon.png"
                 alt="Vercel Logo"
                 width={28}
                 height={28}
