@@ -50,14 +50,9 @@ function Footer() {
         </button>
       </div>
       <div className="container footer">
-        <div>
+        <div className="text-center">
           Copyright ©{new Date().getFullYear()} Flex AquaFox, JSC. All rights
           reserved.
-        </div>
-        <div className="social-group">
-          <div className="social-item">{mail}</div>
-          <div className="social-item">{twitter}</div>
-          <div className="social-item"> {telegram}</div>
         </div>
       </div>
     </footer>

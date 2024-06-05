@@ -27,10 +27,10 @@ function OurClients() {
       <div className="expertise-div container">
         <div className="our-clients-header text-center">
           <h2 className="our-clients-title">OUR SATISFIED CUSTOMERS</h2>
-          <p className="our-clients-description mt-[24px]">
+          {/* <p className="our-clients-description mt-[24px]">
             Read firsthand experiences from clients who have experienced the
             transformative power of our marketing services.
-          </p>
+          </p> */}
         </div>
         <Swiper
           onInit={(swiper) => {

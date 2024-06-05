@@ -14,7 +14,7 @@ function Header() {
     <Navbar className="py-[16px] bg-white" maxWidth="xl">
       <NavbarBrand>
         <Image
-          src="/images/logo.png"
+          src="/images/logo_v2.png"
           alt="Vercel Logo"
           width={250}
           height={46}

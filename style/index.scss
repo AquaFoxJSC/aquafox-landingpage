@@ -28,7 +28,7 @@ footer {
 
 .footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   color: var(--Curious-Blue-50, #f0f9ff);
   // font-family: Inter;
@@ -595,6 +595,7 @@ footer {
     .ept-icon {
       width: 40px;
       height: 40px;
+      display: none;
 
       img {
         width: 18px;
@@ -697,6 +698,7 @@ footer {
 
       .swiper-our-clients {
         mask-image: unset;
+        margin-top: 0;
 
         .swiper-our-clients-item {
           margin-top: 30px;

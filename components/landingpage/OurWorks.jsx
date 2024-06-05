@@ -61,7 +61,7 @@ function OurWorks() {
             </div>
             <div className="work-title">
               Decentralized Exchange & Aggregator - Auto Trading Bot with best
-              token prices.
+              token prices
             </div>
           </SwiperSlide>
           <SwiperSlide className="swiper-our-works-item">
@@ -74,7 +74,7 @@ function OurWorks() {
                 priority
               />
             </div>
-            <div className="work-title">Game Fi - Earn-fi Platform</div>
+            <div className="work-title">DriftTo Game - The play to earn platform for car racing lovers</div>
           </SwiperSlide>
           <SwiperSlide className="swiper-our-works-item">
             <div className="work-image">
@@ -87,7 +87,7 @@ function OurWorks() {
               />
             </div>
             <div className="work-title">
-              Crypto Wallet - A convenient and secure wallet
+              EZ crypto wallet - The convenient yet secure wallet for end users
             </div>
           </SwiperSlide>
           <SwiperSlide className="swiper-our-works-item">
@@ -101,8 +101,8 @@ function OurWorks() {
               />
             </div>
             <div className="work-title">
-              Centralized Exchange - A global crypto exchange platform with 0%
-              transaction fee for major pairs
+              Centralized Exchange - A global crypto exchange with 0%
+              fee for major pairs
             </div>
           </SwiperSlide>
           <SwiperSlide className="swiper-our-works-item">
@@ -131,7 +131,7 @@ function OurWorks() {
               />
             </div>
             <div className="work-title">
-              HolaMate - Donate KOL and wallet NFT
+              HolaMate - A friendly solution for donating to KOLs and storing NFTs
             </div>
           </SwiperSlide>
         </Swiper>
