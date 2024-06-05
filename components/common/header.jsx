@@ -34,7 +34,7 @@ function Header() {
         </NavbarItem>
         <NavbarItem>
           <Link color="foreground" href="#partner">
-            Partner
+            Partners
           </Link>
         </NavbarItem>
       </NavbarContent>
