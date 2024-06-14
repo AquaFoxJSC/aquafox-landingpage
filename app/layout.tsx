@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/next-script-for-ga */
 /* eslint-disable @next/next/no-page-custom-font */
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -32,7 +33,21 @@ export default function RootLayout({
         <link
           href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
           rel="stylesheet"
-        />  
+        />
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-DD2N4YQGPJ"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-DD2N4YQGPJ');
+          `,
+          }}
+        />
       </Head>
       <body className={inter.className}>
         <Header />
