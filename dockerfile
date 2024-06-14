@@ -25,6 +25,7 @@ COPY --chown=node:node --from=builder /build/next.config.mjs ./next.config.mjs
 COPY --chown=node:node --from=builder /build/postcss.config.mjs ./postcss.config.mjs
 COPY --chown=node:node --from=builder /build/tailwind.config.ts ./tailwind.config.ts
 COPY --chown=node:node --from=builder /build/tsconfig.json ./tsconfig.json
+COPY --chown=node:node --from=builder /build/public ./public
 
 EXPOSE 3000
 ENV PORT 3000
