@@ -11,7 +11,7 @@ import Image from "next/image";
 
 function Expertise() {
   return (
-    <div  id="services" className="expertise-section">
+    <div id="services" className="expertise-section">
       <div className="expertise-div container">
         <h2>AquaFox’s Expertise</h2>
         <div className="expertise-items">
@@ -82,10 +82,11 @@ function Expertise() {
                 priority
               />
             </div>
-            <div className="ept-title">Multiple Platform</div>
+            <div className="ept-title">
+              Powerful & Seamless DEX Investing Tools
+            </div>
             <div className="ept-text">
-              Simplify your DEX investments, making them as straightforward as
-              traditional stock market ventures.
+              Simplify your DEX investments, making them as straightforward as traditional stock market ventures.
             </div>
           </div>
           <div className="ept-img">
