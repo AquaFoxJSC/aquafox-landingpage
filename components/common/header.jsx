@@ -21,7 +21,7 @@ function Header() {
           priority
         />
       </NavbarBrand>
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+      <NavbarContent className="hidden sm:flex" style={{gap: '3rem', fontWeight: 500}} justify="center">
         <NavbarItem>
           <Link color="foreground" href="#home">
             Home
