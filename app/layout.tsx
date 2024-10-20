@@ -49,9 +49,11 @@ export default function RootLayout({
           }}
         />
       </Head>
-      <body className={inter.className}>
+      <body className={`${inter.className} flex flex-col min-h-screen`}>
         <Header />
-        {children}
+        <div className='flex-1 flex justify-center overflow-y-auto'>
+            {children}
+        </div>
         <Footer />
       </body>
     </html>
