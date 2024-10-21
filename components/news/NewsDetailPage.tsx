@@ -1,8 +1,14 @@
 import React from 'react';
 import Link from "next/link";
 import dayjs from "dayjs";
+import {DAYJS_FORMAT_DATE} from "@/constant/constants";
 
-function NewsDetailPage({data} : any) {
+interface NewsDetailPageProps {
+    data: any
+}
+
+function NewsDetailPage(props: NewsDetailPageProps) {
+    const {data} = props
     return (
         <div className='container pb-10'>
             <Link href="/news">
@@ -35,9 +41,7 @@ function NewsDetailPage({data} : any) {
                             <div className="published-date"> {data?.publish_at && (
                                 <div className="published-date text-sm text-[#969696]" >
                                     Ngày đăng
-                                    {` ${dayjs(data?.publish_at).format(
-                                        'DD/MM/YYYY'
-                                    )}`}
+                                    {` ${dayjs(data?.publish_at).format(DAYJS_FORMAT_DATE)}`}
                                 </div>
                             )}</div>
                         </div>
