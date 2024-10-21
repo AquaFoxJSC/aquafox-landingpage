@@ -2,8 +2,15 @@ import React from 'react'
 import Image from 'next/image'
 import dayjs from 'dayjs'
 import Link from 'next/link'
+import {DAYJS_FORMAT_DATE_VN} from "@/constant/constants";
 
-function NewsListGrid({ data }: {data: any}) {
+interface NewsListGridProps {
+    data: any[]
+}
+
+function NewsListGrid(props: NewsListGridProps) {
+    const {data } = props
+
     return (
         <>
             {data?.length ? (
@@ -24,9 +31,9 @@ function NewsListGrid({ data }: {data: any}) {
                             <div className="blog-info mt-5 px-4 pt-4 pb-10 bg-[#fdfdfd]">
                                 <p className="blog-item-title line-clamp-3 text-xl font-bold text-black mb-4">{item.title}</p>
                                 <p
-                                    className="blog-item-author text-xs mb-2 text-[#676767]">
+                                    className="blog-item-author text-xs mb-2 text-[#676767] flex items-center gap-2">
                                     By {item?.created_user?.full_name}
-                                    <span>{dayjs(item.created_at).format('D MMMM, YYYY')}</span>
+                                    <span>{dayjs(item.created_at).format(DAYJS_FORMAT_DATE_VN)}</span>
                                 </p>
                                 <div className="separate-horizontal border border-[#f1f0f0] mb-4"></div>
                                 <div
@@ -40,14 +47,7 @@ function NewsListGrid({ data }: {data: any}) {
     )
 :
     (
-        <div
-            style={{
-                minHeight: '50vh',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-            }}
-        >
+        <div className='flex items-center justify-center min-h-[50vh]'>
             <div>Chưa có bài viết nào</div>
         </div>
     )

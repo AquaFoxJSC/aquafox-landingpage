@@ -7,6 +7,7 @@ import dayjs from "dayjs";
 import NewsListGrid from "@/components/news/NewsListGrid";
 import {Pagination} from "antd";
 import {useRouter} from "next/navigation";
+import {DAYJS_FORMAT_DATE_VN} from "@/constant/constants";
 
 interface NewsPageProps {
     newsList: any[]
@@ -43,9 +44,9 @@ function NewsPage(props: NewsPageProps) {
                                                      src={blog1?.thumbnail}
                                                      alt=""/>
                                                 <p className="blog-item-title absolute bottom-[20%] w-[90%] ml-[5%] text-[#fff] font-bold [text-shadow:_2px_2px_4px_rgba(0_0_0_/_0.5)] ">Người{blog1?.title}</p>
-                                                <p className="blog-item-author absolute text-white  bottom-[10%] w-[90%] ml-[5%] text-[10px]  [text-shadow:_2px_2px_4px_rgba(0_0_0_/_0.5)]">
+                                                <p className="blog-item-author absolute text-white  bottom-[10%] w-[90%] ml-[5%] text-[10px]  [text-shadow:_2px_2px_4px_rgba(0_0_0_/_0.5)]  flex items-center gap-2">
                                                     By {blog1?.created_user?.full_name}
-                                                    <span>{dayjs(blog1.created_at).format('D MMMM, YYYY')}</span>
+                                                    <span>{dayjs(blog1.created_at).format(DAYJS_FORMAT_DATE_VN)}</span>
                                                 </p>
                                             </div>
                                             <div className="blog-item-description mt-6 text-[10px] text-left text-[#04594d]">
@@ -81,9 +82,9 @@ function NewsPage(props: NewsPageProps) {
                                                 className="separate-vertical h-[80%] top-[10%] relative border-[#f1f0f0] border"></div>
                                             <div className='flex-1'>
                                                 <p className="blog-item-title text-lg mb-4 line-clamp-2">{blog3?.title}</p>
-                                                <p className="blog-item-author text-[10px] mb-2 text-[#676767]">
+                                                <p className="blog-item-author text-[10px] mb-2 text-[#676767]  flex items-center gap-2">
                                                     By {blog3?.created_user?.full_name}
-                                                    <span>{dayjs(blog3.created_at).format('D MMMM, YYYY')}</span>
+                                                    <span>{dayjs(blog3.created_at).format(DAYJS_FORMAT_DATE_VN)}</span>
                                                 </p>
                                                 <div className="separate-horizontal border border-[#f1f0f0] mb-4"></div>
                                                 <p className="blog-item-description line-clamp-4 text-sm text-[#04594d] mb-0">
