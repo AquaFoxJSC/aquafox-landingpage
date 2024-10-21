@@ -7,7 +7,7 @@ async function Home({params, searchParams}: any) {
     try {
         const apiRs = await newsApis.getAllNews({
             page: searchParams?.page || 1,
-            limit: 1000
+            limit: 9
         });
 
         return (

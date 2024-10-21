@@ -4,7 +4,18 @@ import dayjs from "dayjs";
 import {DAYJS_FORMAT_DATE} from "@/constant/constants";
 
 interface NewsDetailPageProps {
-    data: any
+    data: {
+        thumbnail: string,
+        created_user: {
+            avatar_url: string,
+            full_name: string
+        },
+        publish_at: string,
+        tags: string[],
+        title: string,
+        short_description: string,
+        content: string
+    }
 }
 
 function NewsDetailPage(props: NewsDetailPageProps) {
