@@ -13,28 +13,39 @@ function Header() {
   return (
     <Navbar className="py-[16px] bg-white" maxWidth="xl">
       <NavbarBrand>
-        <Image
-          src="/images/logo_v3.png"
-          alt="Vercel Logo"
-          width={250}
-          height={46}
-          priority
-        />
+        <Link href="/">
+          <Image
+            src="/images/logo_v3.png"
+            alt="Vercel Logo"
+            width={250}
+            height={46}
+            priority
+          />
+        </Link>
       </NavbarBrand>
-      <NavbarContent className="hidden sm:flex" style={{gap: '3rem', fontWeight: 500}} justify="center">
+      <NavbarContent
+        className="hidden sm:flex"
+        style={{ gap: "3rem", fontWeight: 500 }}
+        justify="center"
+      >
         <NavbarItem>
-          <Link color="foreground" href="#home">
+          <Link color="foreground" href="/#home">
             Home
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link href="#services" aria-current="page">
+          <Link href="/#services" aria-current="page">
             Services
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#partner">
+          <Link color="foreground" href="/#partner">
             Partners
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link color="foreground" href="/news">
+            News
           </Link>
         </NavbarItem>
       </NavbarContent>
