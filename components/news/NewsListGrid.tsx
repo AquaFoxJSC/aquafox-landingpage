@@ -48,7 +48,7 @@ function NewsListGrid(props: NewsListGridProps) {
         </div>
       ) : (
         <div className="flex items-center justify-center min-h-[50vh]">
-          <div>No posts yeto</div>
+          <div>No posts yet.</div>
         </div>
       )}
     </>
