@@ -377,11 +377,13 @@ footer {
 
     .swiper-our-clients {
       max-width: 100%;
-      mask-image: linear-gradient(to right,
-          rgba(0, 0, 0, 0) 0%,
-          rgb(0, 0, 0) 25%,
-          rgb(0, 0, 0) 75%,
-          rgba(0, 0, 0, 0) 100%);
+      mask-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0) 0%,
+        rgb(0, 0, 0) 25%,
+        rgb(0, 0, 0) 75%,
+        rgba(0, 0, 0, 0) 100%
+      );
 
       .swiper-our-clients-item {
         background: #2684ff;
@@ -479,8 +481,6 @@ footer {
       padding-top: 96px;
     }
 
-
-
     .expertise-div {
       h2 {
         margin-bottom: 20px;
@@ -529,7 +529,6 @@ footer {
   }
 
   .landing-page {
-
     .hero-img {
       margin-top: unset;
     }
@@ -754,10 +753,35 @@ footer {
   }
 }
 
-.ck-content  img {
+.ck-content img {
   margin: 12px auto;
   display: block;
   max-width: 100%;
   min-width: 80%;
   height: auto;
+}
+
+.breadcrumb-block {
+  font-size: 24px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+
+  .ant-breadcrumb-separator {
+    margin-inline: 12px;
+    color: black;
+    font-weight: 600;
+  }
+
+  .ant-breadcrumb-link {
+    color: #0084d1;
+    font-weight: 600;
+
+    a {
+      height: 100%;
+      color: #0f162f;
+      font-weight: 400;
+    }
+  }
 }

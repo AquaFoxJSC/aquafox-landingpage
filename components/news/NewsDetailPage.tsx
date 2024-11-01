@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import dayjs from "dayjs";
 import { DAYJS_FORMAT_DATE } from "@/constant/constants";
+import BreadcrumbComponent from "../common/BreadcrumbComponent";
 
 interface NewsDetailPageProps {
   data: {
@@ -20,11 +21,24 @@ interface NewsDetailPageProps {
 
 function NewsDetailPage(props: NewsDetailPageProps) {
   const { data } = props;
+
+  const newsBreadcrumbs = [
+    {
+      title: "Landing Page",
+      link: "/",
+    },
+    {
+      title: "News",
+      link: "/news",
+    },
+    {
+      title: data?.title,
+    },
+  ];
+
   return (
-    <div className="max-w-[1280px] mx-auto px-6 pb-10">
-      <Link href="/news">
-        <div className="news-text pt-8 mb-8 text-3xl font-semibold">News</div>
-      </Link>
+    <div className="max-w-[1280px] mx-auto px-6 pb-[150px]">
+      <BreadcrumbComponent items={newsBreadcrumbs} />
 
       <div className="news-block">
         {data?.thumbnail && (

@@ -8,11 +8,22 @@ import NewsListGrid from "@/components/news/NewsListGrid";
 import { Pagination } from "antd";
 import { useRouter } from "next/navigation";
 import { DAYJS_FORMAT_DATE_VN } from "@/constant/constants";
+import BreadcrumbComponent from "../common/BreadcrumbComponent";
 
 interface NewsPageProps {
   newsList: any[];
   totalItems: number;
 }
+
+const newsBreadcrumbs = [
+  {
+    title: "Landing Page",
+    link: "/",
+  },
+  {
+    title: "News",
+  },
+];
 
 function NewsPage(props: NewsPageProps) {
   const { newsList } = props;
@@ -26,8 +37,10 @@ function NewsPage(props: NewsPageProps) {
 
   return (
     <div className="w-full">
-      <div className="max-w-[1280px] mx-auto px-6 pb-10">
-        <div className="pt-8 mb-8 text-3xl font-semibold">News</div>
+      <div className="max-w-[1280px] mx-auto px-6 pb-[150px]">
+        {/* <div className="pt-8 mb-8 text-3xl font-semibold">News</div> */}
+        <BreadcrumbComponent items={newsBreadcrumbs} />
+
         <div className="blog-list-content">
           {newsList.length > 3 &&
           Number(params.get("page")) === 1 &&

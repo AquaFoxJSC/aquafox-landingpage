@@ -8,6 +8,8 @@ interface NewsListGridProps {
   data: any[];
 }
 
+
+
 function NewsListGrid(props: NewsListGridProps) {
   const { data } = props;
 
