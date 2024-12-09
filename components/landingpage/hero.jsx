@@ -8,6 +8,7 @@ import {
   Button,
 } from "@nextui-org/react";
 import Image from "next/image";
+import { arrowRight } from "@/constant/svg";
 
 function Hero() {
   return (
@@ -23,6 +24,9 @@ function Hero() {
             Empower your business with cutting-edge blockchain technology.
             <br></br>
             Experience the ease and delight of cryptocurrency with AquaFox.
+          </div>
+          <div className="flex justify-center mt-[24px]">
+            <button className="btn-contact-us gap-[7px]">Contact Us {arrowRight}</button>
           </div>
         </div>
 

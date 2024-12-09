@@ -9,13 +9,17 @@ import {
 } from "@nextui-org/react";
 import Image from "next/image";
 import { Button, Drawer } from "antd";
+import { usePathname } from "next/navigation";
 
 function Header() {
   const [open, setOpen] = useState(false);
 
+
   const onClose = () => {
     setOpen(false);
   };
+
+  const pathname = usePathname()
 
   return (
     <Navbar className="py-[16px] bg-white" maxWidth="xl">
@@ -31,39 +35,57 @@ function Header() {
         </Link>
       </NavbarBrand>
       <NavbarContent
-        className="hidden sm:flex"
-        style={{ gap: "3rem", fontWeight: 500 }}
-        justify="center"
-      >
-        <NavbarItem>
-          <Link color="foreground" href="/#home">
-            Home
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link href="/#services" aria-current="page">
-            Services
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href="/#partner">
-            Partners
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href="/news">
-            News
-          </Link>
-        </NavbarItem>
-      </NavbarContent>
+      className="hidden sm:flex"
+      style={{ gap: "3rem", fontWeight: 500 }}
+      justify="center"
+    >
+      <NavbarItem>
+        <Link
+          href="/"
+          style={{
+            color: pathname === "/" ? "#2684FF" : "#666666",
+          }}
+        >
+          Home
+        </Link>
+      </NavbarItem>
+      <NavbarItem>
+        <Link
+          href="/liquidity-provision"
+          style={{
+            color: pathname === "/liquidity-provision" ? "#2684FF" : "#666666",
+          }}
+        >
+          Liquidity Provision
+        </Link>
+      </NavbarItem>
+      <NavbarItem>
+        <Link
+          href="/contact"
+          style={{
+            color: pathname === "/contact" ? "#2684FF" : "#666666",
+          }}
+        >
+          Contact
+        </Link>
+      </NavbarItem>
+      <NavbarItem>
+        <Link
+          href="/news"
+          style={{
+            color: pathname === "/news" ? "#2684FF" : "#666666",
+          }}
+        >
+          News
+        </Link>
+      </NavbarItem>
+    </NavbarContent>
       <NavbarContent className="hidden sm:flex" justify="end">
         <NavbarItem>
           <Link
-            href="https://t.me/AquaFoxJSC"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/contact"
           >
-            <button className="btn-contact-us">Contact Us</button>
+            <button className="btn-contact-us">Get in touch</button>
           </Link>
         </NavbarItem>
       </NavbarContent>

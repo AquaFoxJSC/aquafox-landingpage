@@ -6,7 +6,7 @@ import "./globals.css";
 import "../style/index.scss";
 
 import Header from "../components/common/header";
-import Footer from "../components/common/footer";
+import Footer from "../components/common/footer/Footer";
 import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -24,6 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Head>
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="121x134" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
@@ -51,7 +52,7 @@ export default function RootLayout({
       </Head>
       <body className={`${inter.className} flex flex-col min-h-screen`}>
         <Header />
-        <div className="min-h-screen-minus-147">{children}</div>
+        <div className="min-h-screen-minus-334">{children}</div>
         <Footer />
       </body>
     </html>

@@ -16,6 +16,7 @@ const config: Config = {
       },
       minHeight: {
         "screen-minus-147": "calc(100vh - 147px)",
+        "screen-minus-334": "calc(100vh - 334px)",
       },
     },
   },
