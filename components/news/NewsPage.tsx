@@ -10,6 +10,7 @@ import { useRouter } from "next/navigation";
 import { DAYJS_FORMAT_DATE_VN } from "@/constant/constants";
 import BreadcrumbComponent from "../common/BreadcrumbComponent";
 import TopNewsCard from "./TopNewsCard";
+import { NewsCard } from "./NewsCard";
 
 interface NewsPageProps {
   newsList: any[];
@@ -38,117 +39,13 @@ function NewsPage(props: NewsPageProps) {
   };
 
   return (
-    // <div className="w-full">
-    //   <div className="max-w-[1280px] mx-auto px-6 pb-[150px]">
-    //     {/* <div className="pt-8 mb-8 text-3xl font-semibold">News</div> */}
-    //     <BreadcrumbComponent items={newsBreadcrumbs} />
-
-    //     <div className="blog-list-content">
-    //       {newsList.length > 3 &&
-    //       Number(params.get("page")) === 1 &&
-    //       Number(innerWidth) > 990 ? (
-    //         <>
-    //           <div className="blog-list-highlight flex gap-6 bg-[#fdfdfd] pt-6 pb-6">
-    //             <div className="blog-highlight-left flex-1 flex-shrink-0 pl-2">
-    //               <Link
-    //                 className="blog-first-item"
-    //                 href={`/news/${blog1?.slug}`}
-    //               >
-    //                 <div className="blog-item-thumb relative">
-    //                   <img
-    //                     className="w-full object-cover"
-    //                     src={blog1?.thumbnail}
-    //                     alt=""
-    //                   />
-    //                   <p className="blog-item-title absolute bottom-[20%] w-[90%] ml-[5%] text-[#fff] font-bold [text-shadow:_2px_2px_4px_rgba(0_0_0_/_0.5)] ">
-    //                     Người{blog1?.title}
-    //                   </p>
-    //                   <p className="blog-item-author absolute text-white  bottom-[10%] w-[90%] ml-[5%] text-[10px]  [text-shadow:_2px_2px_4px_rgba(0_0_0_/_0.5)]  flex items-center gap-2">
-    //                     By {blog1?.created_user?.full_name}
-    //                     <span>
-    //                       {dayjs(blog1.created_at).format(DAYJS_FORMAT_DATE_VN)}
-    //                     </span>
-    //                   </p>
-    //                 </div>
-    //                 <div className="blog-item-description mt-6 text-[10px] text-left text-[#04594d]">
-    //                   {blog1?.short_description}
-    //                 </div>
-    //               </Link>
-    //             </div>
-    //             <div className="blog-highlight-right flex-1 flex-shink-0 flex flex-col pr-8 gap-6">
-    //               <Link
-    //                 className="blog-second-item flex-shink-0"
-    //                 href={`/news/${blog2?.slug}`}
-    //               >
-    //                 <div className="blog-item-thumb relative bg-[#1a1a1a] w-full h-60">
-    //                   <img
-    //                     className="w-1/2 absolute left-[40%] object-cover h-full"
-    //                     src={blog2.thumbnail}
-    //                     alt=""
-    //                   />
-    //                   <p className="blog-item-description absolute top-[5%] left-[5%] max-w-[150px] text-[#d5d5d5]  [text-shadow:_2px_2px_4px_rgba(0_0_0_/_0.5)] line-clamp-[8]">
-    //                     {blog2.short_description}
-    //                   </p>
-    //                   <p className="blog-item-title line-clamp-3 absolute left-[45%] bottom-[10%] max-w-[300px] font-bold text-xl text-[#f7f7f4] [text-shadow:_2px_2px_4px_rgba(0_0_0_/_0.5)]">
-    //                     {blog2.title}
-    //                   </p>
-    //                 </div>
-    //               </Link>
-    //               <Link
-    //                 className="blog-third-item flex-shink-0 flex gap-6 pr-4"
-    //                 href={`/news/${blog3?.slug}`}
-    //               >
-    //                 <div className="blog-item-thumb">
-    //                   <img
-    //                     className="object-cover w-[172px] h-[185px]"
-    //                     src={blog3?.thumbnail}
-    //                     alt=""
-    //                   />
-    //                 </div>
-    //                 <div className="separate-vertical h-[80%] top-[10%] relative border-[#f1f0f0] border"></div>
-    //                 <div className="flex-1">
-    //                   <p className="blog-item-title text-lg mb-4 line-clamp-2">
-    //                     {blog3?.title}
-    //                   </p>
-    //                   <p className="blog-item-author text-[10px] mb-2 text-[#676767]  flex items-center gap-2">
-    //                     By {blog3?.created_user?.full_name}
-    //                     <span>
-    //                       {dayjs(blog3.created_at).format(DAYJS_FORMAT_DATE_VN)}
-    //                     </span>
-    //                   </p>
-    //                   <div className="separate-horizontal border border-[#f1f0f0] mb-4"></div>
-    //                   <p className="blog-item-description line-clamp-4 text-sm text-[#04594d] mb-0">
-    //                     {blog3?.short_description}
-    //                   </p>
-    //                 </div>
-    //               </Link>
-    //             </div>
-    //           </div>
-    //           <NewsListGrid data={rest} />
-    //         </>
-    //       ) : (
-    //         <NewsListGrid data={newsList} />
-    //       )}
-
-    //       <Pagination
-    //         className="mt-4"
-    //         current={Number(params.get("page")) || 1}
-    //         defaultPageSize={9}
-    //         onChange={handlePageChange}
-    //         total={props?.totalItems}
-    //         showSizeChanger={false}
-    //         hideOnSinglePage
-    //       />
-    //     </div>
-    //   </div>
-    // </div>
     <div className="w-full">
       <div className="max-w-[1280px] mx-auto px-6 pb-[150px]">
         <div className="flex flex-col">
           <div className="flex flex-col w-full font-medium max-md:max-w-full">
             <div className="flex gap-2 items-center self-start text-base tracking-tight whitespace-nowrap">
-              <div className="self-stretch my-auto text-stone-500">Home</div>
-              <img
+            <Link href="/" className="self-stretch my-auto text-stone-500">Home</Link>
+            <img
                 loading="lazy"
                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/117707eb37e9de2c11a722bda7723924cdfe7b33c35266b31e44df5f21855841?placeholderIfAbsent=true&apiKey=5f3d3068f7634759bee728f966e36875"
                 alt=""
@@ -176,13 +73,19 @@ function NewsPage(props: NewsPageProps) {
                   </div>
                   <div className="mt-5 text-base tracking-tight text-zinc-500 max-md:max-w-full">
                     {topNews?.[0]?.short_description}
-
                   </div>
                 </div>
                 <div className="flex flex-wrap gap-10 justify-between items-start mt-5 w-full text-sm tracking-tight max-md:max-w-full">
-                  <div className="text-zinc-500">{dayjs(topNews?.[0]?.created_at).format(DAYJS_FORMAT_DATE_VN)}</div>
-                  <button className="flex gap-2 items-start font-semibold text-blue-500">
-                    <span><Link href={`/news/${topNews?.[0]?.slug}`}></Link>Read more</span>
+                  <div className="text-zinc-500">
+                    {dayjs(topNews?.[0]?.created_at).format(
+                      DAYJS_FORMAT_DATE_VN
+                    )}
+                  </div>
+                  <button className="flex gap-2 items-start font-semibold text-[#2684FF] items-center">
+                    <span>
+                      <Link href={`/news/${topNews?.[0]?.slug}`}></Link>Read
+                      more
+                    </span>
                     <img
                       loading="lazy"
                       src="https://cdn.builder.io/api/v1/image/assets/TEMP/61cceb81e7f5a1d38cb0fb0bdc1f820de43c777e10a0fdc4590feef2017640c7?placeholderIfAbsent=true&apiKey=5f3d3068f7634759bee728f966e36875"
@@ -200,23 +103,24 @@ function NewsPage(props: NewsPageProps) {
               <div className="flex flex-col flex-1 mt-2.5 w-full">
                 {topNews.slice(1, topNews.length).map((news, index) => (
                   <div key={news.id} className={index > 0 ? "mt-5" : ""}>
-                    <TopNewsCard
-                      item={news}
-                    />
+                    <TopNewsCard item={news} />
                   </div>
                 ))}
               </div>
             </div>
- 
           </div>
-          <div className="flex">
-              <div className="text-[#0F162F] text-xl not-italic font-medium leading-[normal] tracking-[-0.6px]">More</div>
-              {/* <div className="flex flex-wrap gap-8 items-start mt-8 w-full">
-                {newsArticles.slice(0, 3).map((article) => (
-                  <NewsCard key={article.id} {...article} />
-                ))}
-              </div> */}
+          <div className="mt-[40px]">
+            <div className="flex">
+              <div className="text-[#0F162F] text-xl not-italic font-medium leading-[normal] tracking-[-0.6px]">
+                More
+              </div>
             </div>
+            <div className="flex flex-wrap gap-8 items-start mt-8 w-full">
+              {newsList.map((article) => (
+                <NewsCard key={article.id} item={article} />
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </div>

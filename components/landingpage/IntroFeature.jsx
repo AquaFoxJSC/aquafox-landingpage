@@ -7,7 +7,7 @@ function InfoCard({ icon, title, description }) {
     <div className="flex flex-col flex-1 shrink justify-center self-stretch my-auto basis-0 min-w-[240px]">
       {icon}
       <div className="flex flex-col mt-5 w-full">
-        <div className="self-start text-4xl font-medium tracking-tighter text-center bg-clip-text special-text">
+        <div className="self-start lg:text-4xl text-xl font-medium tracking-tighter text-center bg-clip-text special-text">
           {title}
         </div>
         <div className="mt-2.5 text-base tracking-tight text-gray-700">
@@ -34,9 +34,9 @@ const featureData = [
 
 export default function IntroFeature() {
   return (
-    <div className="flex overflow-hidden gap-10 justify-center items-center py-24 bg-[#EEF7FF]">
+    <div className="flex overflow-hidden gap-10 justify-center items-center lg:py-24 py-[60px] px-[16px] bg-[#EEF7FF]">
       <div className="flex flex-wrap gap-10 self-stretch my-auto min-w-[240px] w-[1250px] items-center">
-        <div className="flex flex-col px-9 min-w-[240px] w-[316px] max-md:px-5">
+        <div className="flex-col px-9 min-w-[240px] w-[316px] max-md:px-5 lg:flex hidden">
           <Image
               src="/images/expertise/expertise2.png"
               alt="Vercel Logo"
@@ -46,7 +46,7 @@ export default function IntroFeature() {
               priority
             />
         </div>
-        <div className="border-0 border-l-[1px] pl-[60px]  border-solid border-[#DCDCDC] flex flex-wrap flex-1 shrink gap-10 items-center my-auto basis-[72px] min-w-[240px] max-md:max-w-full">
+        <div className="border-0 lg:border-l-[1px] border-l-0 lg:pl-[60px] pl-[0]  border-solid border-[#DCDCDC] lg:flex-row flex-col flex flex-wrap flex-1 shrink gap-10 items-center my-auto basis-[72px] min-w-[240px] max-md:max-w-full">
           {featureData.map((feature, index) => (
             <InfoCard
               key={index}

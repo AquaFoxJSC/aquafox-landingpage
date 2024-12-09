@@ -38,7 +38,24 @@ function NewsDetailPage(props: NewsDetailPageProps) {
 
   return (
     <div className="max-w-[1280px] mx-auto px-6 pb-[150px]">
-      <BreadcrumbComponent items={newsBreadcrumbs} />
+      {/* <BreadcrumbComponent items={newsBreadcrumbs} /> */}
+      <div className="flex gap-2 items-center self-start text-base tracking-tight whitespace-nowrap">
+        <Link href="/" className="self-stretch my-auto text-stone-500">Home</Link>
+        <img
+          loading="lazy"
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/117707eb37e9de2c11a722bda7723924cdfe7b33c35266b31e44df5f21855841?placeholderIfAbsent=true&apiKey=5f3d3068f7634759bee728f966e36875"
+          alt=""
+          className="object-contain shrink-0 self-stretch my-auto w-2.5 aspect-square"
+        />
+        <Link href="/news" className="self-stretch my-auto text-stone-500">News</Link>
+        <img
+          loading="lazy"
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/117707eb37e9de2c11a722bda7723924cdfe7b33c35266b31e44df5f21855841?placeholderIfAbsent=true&apiKey=5f3d3068f7634759bee728f966e36875"
+          alt=""
+          className="object-contain shrink-0 self-stretch my-auto w-2.5 aspect-square"
+        />
+        <div className="self-stretch my-auto text-blue-500">{data?.title}</div>
+      </div>
 
       <div className="news-block">
         {data?.thumbnail && (

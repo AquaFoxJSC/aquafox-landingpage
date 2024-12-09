@@ -11,7 +11,7 @@ export function NewsCard({ item }) {
           loading="lazy"
           src={thumbnail}
           alt={title}
-          className="object-cover w-[340px] h-[191px]"
+          className="object-cover w-[100%] h-[191px]"
         />
       </div>
       <div className="flex flex-col mt-5 w-full">
@@ -30,7 +30,7 @@ export function NewsCard({ item }) {
           {dayjs(created_at).format(DAYJS_FORMAT_DATE_VN)}
         </div>
         <button
-          className="flex gap-1 items-start font-semibold text-blue-500"
+          className="flex gap-1 items-center font-semibold text-[#2684FF]"
           tabIndex="0"
         >
           <span>Read more</span>
