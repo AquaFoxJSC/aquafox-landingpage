@@ -51,7 +51,7 @@ const SvgHover = () => {
         fill="none"
         viewBox="0 0 1670 490"
         preserveAspectRatio="xMidYMid meet"
-        style={{ width: "80%", height: "auto" }}
+        className="xl:w-[80%] w-[90%]"
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
       >

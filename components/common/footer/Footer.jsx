@@ -86,7 +86,7 @@ function Footer() {
 
   return (
     <footer>
-      {!hideFixed && (
+      {/* {!hideFixed && (
         <>
           <div className="fixed bottom-[15px] md:bottom-[50px] right-4 md:right-[55px] z-50">
             <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-4 rounded-full shadow-lg w-[60px] flex justify-center">
@@ -109,8 +109,8 @@ function Footer() {
             </button>
           </div>
         </>
-      )}
-      <div className="flex flex-wrap gap-10 justify-between px-24 py-16 bg-[#2D5486] max-md:px-5">
+      )} */}
+      <div className="flex flex-wrap gap-10 justify-between lg:px-24 px-6 py-16 bg-[#2D5486] max-md:px-5">
         <div className="flex flex-col my-auto">
           {/* <img
             loading="lazy"
@@ -119,7 +119,7 @@ function Footer() {
             className="object-contain max-w-full aspect-[4.93] w-[177px]"
           /> */}
           {aquafoxFooter}
-          <div className="flex gap-5 items-center mt-8">
+          <div className="flex gap-5 items-center mt-8 text-white">
             <div className="flex gap-2.5 items-center self-stretch p-2.5 my-auto w-10 h-10 rounded-3xl bg-blue-400 bg-opacity-20">
               {mail}  
             </div>
@@ -134,7 +134,7 @@ function Footer() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col justify-between items-end font-medium min-w-[240px]">
+        <div className="flex flex-col justify-between lg:items-end items-start font-medium min-w-[240px]">
           <div className="flex gap-2.5 items-center text-base tracking-tight text-white whitespace-nowrap">
             {navItems.map((item, index) => (
               <NavItem

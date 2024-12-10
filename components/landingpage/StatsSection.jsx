@@ -19,7 +19,7 @@ const statsData = [
 
 function StatCard({ number, description }) {
   return (
-    <div className="flex flex-col flex-1 shrink basis-0 min-w-[240px]">
+    <div className="flex flex-col flex-1 shrink basis-0 lg:min-w-[240px]">
       <div className="text-5xl font-semibold tracking-tighter bg-clip-text special-text max-md:text-4xl">
         {number}
       </div>
@@ -32,8 +32,8 @@ function StatCard({ number, description }) {
 
 export default function StatsSection() {
   return (
-    <div className="flex flex-col justify-center items-center py-20 bg-[#2D3F64]">
-      <div className="flex flex-wrap gap-8 items-start max-w-full w-[1000px]">
+    <div className="flex flex-col justify-center items-center py-20 px-4 bg-[#2D3F64]">
+      <div className="flex flex-wrap sm:flex-row flex-col gap-8 items-start max-w-full w-[1000px]">
         {statsData.map((stat, index) => (
           <StatCard
             key={index}

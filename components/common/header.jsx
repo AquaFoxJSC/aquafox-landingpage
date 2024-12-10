@@ -131,7 +131,7 @@ function Header() {
             />
           </div>
         </Dropdown> */}
-        <NavbarItem>
+        {/* <NavbarItem>
           <Link
             href="/contact"
             style={{
@@ -140,7 +140,7 @@ function Header() {
           >
             Contact
           </Link>
-        </NavbarItem>
+        </NavbarItem> */}
         <NavbarItem>
           <Link
             href="/news"
@@ -192,7 +192,7 @@ function Header() {
           <NavbarItem>
             <Link
               color="foreground"
-              href="/#home"
+              href="/"
               onClick={() => setOpen(false)}
             >
               Home
@@ -200,20 +200,11 @@ function Header() {
           </NavbarItem>
           <NavbarItem>
             <Link
-              href="/#services"
+              href="/liquidity-provision"
               aria-current="page"
               onClick={() => setOpen(false)}
             >
-              Services
-            </Link>
-          </NavbarItem>
-          <NavbarItem>
-            <Link
-              color="foreground"
-              href="/#partner"
-              onClick={() => setOpen(false)}
-            >
-              Partners
+              Liquidity Provision
             </Link>
           </NavbarItem>
           <NavbarItem>
@@ -222,14 +213,10 @@ function Header() {
             </Link>
           </NavbarItem>
           <NavbarItem>
-            <Link
-              href="https://t.me/AquaFoxJSC"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <button className="btn-contact-us">Contact Us</button>
-            </Link>
-          </NavbarItem>
+          <Link href="/contact">
+            <button className="btn-contact-us">Get in touch</button>
+          </Link>
+        </NavbarItem>
         </div>
       </Drawer>
     </Navbar>

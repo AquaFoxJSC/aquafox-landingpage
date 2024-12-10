@@ -3,6 +3,40 @@ import Link from "next/link";
 import dayjs from "dayjs";
 import { DAYJS_FORMAT_DATE } from "@/constant/constants";
 import BreadcrumbComponent from "../common/BreadcrumbComponent";
+import { breadcrumbIcon, linkedinIcon, phoneIcon, tgIcon, xIcon } from "@/constant/svg";
+
+const telegram = (
+  <Link
+    href="https://t.me/AquaFoxJSC"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    {tgIcon}
+  </Link>
+);
+
+const phone = (
+  <Link href="tel:0856599797" target="_blank" rel="noopener noreferrer">
+    {phoneIcon}
+  </Link>
+);
+
+const linkedin = (
+  <Link href="/" target="_blank" rel="noopener noreferrer">
+    {linkedinIcon}
+  </Link>
+);
+
+const twitter = (
+  <Link
+    href="https://twitter.com/AquaFoxJsc"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    {xIcon}
+  </Link>
+);
+
 
 interface NewsDetailPageProps {
   data: {
@@ -41,34 +75,19 @@ function NewsDetailPage(props: NewsDetailPageProps) {
       {/* <BreadcrumbComponent items={newsBreadcrumbs} /> */}
       <div className="flex gap-2 items-center self-start text-base tracking-tight whitespace-nowrap">
         <Link href="/" className="self-stretch my-auto text-stone-500">Home</Link>
-        <img
-          loading="lazy"
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/117707eb37e9de2c11a722bda7723924cdfe7b33c35266b31e44df5f21855841?placeholderIfAbsent=true&apiKey=5f3d3068f7634759bee728f966e36875"
-          alt=""
-          className="object-contain shrink-0 self-stretch my-auto w-2.5 aspect-square"
-        />
+        {breadcrumbIcon}
         <Link href="/news" className="self-stretch my-auto text-stone-500">News</Link>
-        <img
-          loading="lazy"
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/117707eb37e9de2c11a722bda7723924cdfe7b33c35266b31e44df5f21855841?placeholderIfAbsent=true&apiKey=5f3d3068f7634759bee728f966e36875"
-          alt=""
-          className="object-contain shrink-0 self-stretch my-auto w-2.5 aspect-square"
-        />
+        {breadcrumbIcon}
         <div className="self-stretch my-auto text-blue-500">{data?.title}</div>
       </div>
 
       <div className="news-block">
-        {data?.thumbnail && (
-          <img
-            className="thumnail-img w-full aspect-video mb-5 rounded-[10px] object-cover"
-            src={
-              data?.thumbnail ||
-              "/images/blogListPage/default-blog-thumbnail.svg"
-            }
-            alt="thumbnail"
-          />
+
+        {data?.title && (
+          <h1 className="text-[40px] mb-2 font-bold">{data?.title}</h1>
         )}
-        <div className="name-and-tags flex justify-between gap-5 my-8">
+
+        <div className="name-and-tags flex justify-between gap-5 my-3">
           <div className="name-section flex items-center gap-3">
             <div className="information flex flex-col">
               <div className="published-date">
@@ -81,22 +100,31 @@ function NewsDetailPage(props: NewsDetailPageProps) {
               </div>
             </div>
           </div>
-          {!!data?.tags?.length && (
+          {/* {!!data?.tags?.length && (
             <div className="tags-section flex justify-end gap-2 flex-1 flex-wrap">
               {(data?.tags || []).map((tag: any, index: any) => (
                 <div
                   key={index}
-                  className="tag-item bg-[#f6f6f6] text-[#585757] text-xl rounded-[40px] px-3 flex items-center"
+                  className="tag-item bg-[#f6f6f6] text-[#585757] text-base rounded-[40px] px-3 flex items-center"
                 >
                   {tag}
                 </div>
               ))}
             </div>
-          )}
+          )} */}
         </div>
-        {data?.title && (
-          <h1 className="text-[40px] mb-2 font-bold">{data?.title}</h1>
+        {data?.thumbnail && (
+          <img
+            className="thumnail-img w-full aspect-video mb-5 rounded-[10px] object-cover"
+            src={
+              data?.thumbnail ||
+              "/images/blogListPage/default-blog-thumbnail.svg"
+            }
+            alt="thumbnail"
+          />
         )}
+
+
         {data?.short_description && (
           <p className="mb-5">
             <b>{data?.short_description}</b>
@@ -106,6 +134,26 @@ function NewsDetailPage(props: NewsDetailPageProps) {
           className="ck-content"
           dangerouslySetInnerHTML={{ __html: data?.content }}
         />
+      </div>
+      <div className="flex flex-wrap gap-10 justify-between items-center pt-9">
+        <div className="flex gap-2.5 items-start self-stretch my-auto text-base font-medium tracking-tight text-[#2684FF] min-w-[240px]">
+          {data?.tags.map((tag, index) => (
+            <div key={tag} className="gap-2.5 self-stretch px-2.5 py-1.5 whitespace-nowrap bg-[#E9F5FF] rounded-3xl">
+              {tag}
+            </div>
+          ))}
+        </div>
+        <div className="flex gap-5 items-center self-stretch my-auto text-white">
+          <div className="flex gap-2.5 items-center self-stretch p-2.5 my-auto w-10 h-10 rounded-3xl bg-[#2684FF]">
+            {linkedin}
+          </div>
+          <div className="flex gap-2.5 items-center self-stretch p-2.5 my-auto w-10 h-10 rounded-3xl bg-[#2684FF]">
+            {twitter}
+          </div>
+          <div className="flex gap-2.5 items-center self-stretch p-2.5 my-auto w-10 h-10 rounded-3xl bg-[#2684FF]">
+            {telegram}
+          </div>
+        </div>
       </div>
     </div>
   );

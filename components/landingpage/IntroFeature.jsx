@@ -36,7 +36,7 @@ export default function IntroFeature() {
   return (
     <div className="flex overflow-hidden gap-10 justify-center items-center lg:py-24 py-[60px] px-[16px] bg-[#EEF7FF]">
       <div className="flex flex-wrap gap-10 self-stretch my-auto min-w-[240px] w-[1250px] items-center">
-        <div className="flex-col px-9 min-w-[240px] w-[316px] max-md:px-5 lg:flex hidden">
+        <div className="flex-col px-9 min-w-[240px] w-[316px] max-md:px-5 xl:flex hidden">
           <Image
               src="/images/expertise/expertise2.png"
               alt="Vercel Logo"
@@ -46,7 +46,7 @@ export default function IntroFeature() {
               priority
             />
         </div>
-        <div className="border-0 lg:border-l-[1px] border-l-0 lg:pl-[60px] pl-[0]  border-solid border-[#DCDCDC] lg:flex-row flex-col flex flex-wrap flex-1 shrink gap-10 items-center my-auto basis-[72px] min-w-[240px] max-md:max-w-full">
+        <div className="border-0 xl:border-l-[1px] border-l-0 xl:pl-[60px] pl-[0]  border-solid border-[#DCDCDC] lg:flex-row flex-col flex flex-wrap flex-1 shrink gap-10 items-center my-auto basis-[72px] min-w-[240px] max-md:max-w-full">
           {featureData.map((feature, index) => (
             <InfoCard
               key={index}

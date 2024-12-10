@@ -1,17 +1,20 @@
 import * as React from "react";
 import dayjs from "dayjs";
 import { DAYJS_FORMAT_DATE_VN } from "@/constant/constants";
+import { arrowActionIcon } from "@/constant/svg";
+import Image from "next/image";
 
 export function NewsCard({ item }) {
   const { slug, title, short_description, created_at, thumbnail } = item;
   return (
-    <div className="flex flex-col flex-grow p-5 bg-white rounded border border-solid border-slate-200 basis-[calc(33.33%-22px)] max-w-[calc(33.33%-22px)] min-w-[240px]">
+    <div className="flex flex-col flex-grow p-5 bg-white rounded border border-solid border-slate-200 basis-[calc(33.33%-22px)] lg:max-w-[calc(33.33%-22px)] min-w-[300px]">
       <div className="flex overflow-hidden flex-col w-full rounded bg-neutral-100">
-        <img
-          loading="lazy"
+        <Image
           src={thumbnail}
           alt={title}
           className="object-cover w-[100%] h-[191px]"
+          width={258}
+          height={191}
         />
       </div>
       <div className="flex flex-col mt-5 w-full">
@@ -34,17 +37,9 @@ export function NewsCard({ item }) {
           tabIndex="0"
         >
           <span>Read more</span>
-          <img
-            loading="lazy"
-            src={
-              "https://cdn.builder.io/api/v1/image/assets/TEMP/327f3066a8e97a523e88fc4c03dd1192a8b355d4baea9f45bc26163630aaea78?placeholderIfAbsent=true&apiKey=5f3d3068f7634759bee728f966e36875"
-            }
-            alt=""
-            className="object-contain shrink-0 w-4 aspect-square"
-          />
+          {arrowActionIcon}
         </button>
       </div>
     </div>
   );
 }
-

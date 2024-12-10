@@ -39,7 +39,7 @@ export default function WhyWorkWithAquaFox() {
   const secondRow = benefitCards.slice(3);
 
   return (
-    <div className="flex flex-col justify-center items-center py-20 text-base tracking-tight text-gray-700 bg-custom-1">
+    <div className="flex flex-col justify-center items-center py-20 text-base tracking-tight text-gray-700 bg-custom-1 lg:px-0 px-3">
       <h2 className="text-3xl font-medium tracking-tighter">
         Why work with AquaFox?
       </h2>

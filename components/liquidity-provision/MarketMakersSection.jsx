@@ -1,4 +1,5 @@
 import { arrowDetail } from "@/constant/svg";
+import Image from "next/image";
 import * as React from "react";
 const marketMakersContent = {
   title: "What are market makers?",
@@ -20,14 +21,15 @@ const marketMakersContent = {
 
 export default function MarketMakersSection() {
   return (
-    <div className="flex flex-col justify-center items-center py-20 bg-[#EEF7FF]">
-      <div className="flex flex-wrap gap-10 justify-center max-w-full w-[1000px]">
-        <div className="flex flex-col px-10 min-w-[240px] w-[474px] max-md:px-5 max-md:max-w-full">
-          <img
-            loading="lazy"
-            src={marketMakersContent.imageUrl}
+    <div className="flex flex-col justify-center items-center py-20 bg-[#EEF7FF] xl:px-0 px-6">
+      <div className="flex lg:flex-row flex-col flex-wrap gap-10 justify-center items-center max-w-full w-[1000px]">
+        <div className="flex flex-colpx-10 min-w-[240px] w-[474px] max-md:px-5 max-md:max-w-full">
+          <Image
+            src={"/images/expertise/expertise1.png"}
             alt="Market makers illustration"
-            className="object-contain z-10 w-full aspect-[1.15]"
+            width={395}
+            height={344}
+            className="object-contain z-10 w-full"
           />
         </div>
         <div className="flex flex-col flex-1 shrink my-auto font-medium basis-[78px] min-w-[240px] max-md:max-w-full">

@@ -4,7 +4,7 @@ import ContactForm from "./ContactForm";
 
 function ContactSection() {
   return (
-    <div className="flex flex-wrap gap-10 justify-center items-start bg-custom-2 pb-[80px] pt-[80px]">
+    <div className="flex flex-wrap gap-10 justify-center items-start bg-custom-2 pb-[80px] pt-[80px] xs:px-0 px-3">
       <div className="flex flex-col justify-center min-w-[240px] w-[612px] max-md:max-w-full">
         <div className="self-start text-4xl font-medium tracking-tighter text-center bg-clip-text special-text max-md:max-w-full">
           Connect with our team

@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-undef */
 "use client";
 import React from "react";
 import { useSearchParams } from "next/navigation";
@@ -11,6 +12,8 @@ import { DAYJS_FORMAT_DATE_VN } from "@/constant/constants";
 import BreadcrumbComponent from "../common/BreadcrumbComponent";
 import TopNewsCard from "./TopNewsCard";
 import { NewsCard } from "./NewsCard";
+import { arrowActionIcon, breadcrumbIcon } from "@/constant/svg";
+import Image from "next/image";
 
 interface NewsPageProps {
   newsList: any[];
@@ -44,13 +47,8 @@ function NewsPage(props: NewsPageProps) {
         <div className="flex flex-col">
           <div className="flex flex-col w-full font-medium max-md:max-w-full">
             <div className="flex gap-2 items-center self-start text-base tracking-tight whitespace-nowrap">
-            <Link href="/" className="self-stretch my-auto text-stone-500">Home</Link>
-            <img
-                loading="lazy"
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/117707eb37e9de2c11a722bda7723924cdfe7b33c35266b31e44df5f21855841?placeholderIfAbsent=true&apiKey=5f3d3068f7634759bee728f966e36875"
-                alt=""
-                className="object-contain shrink-0 self-stretch my-auto w-2.5 aspect-square"
-              />
+              <Link href="/" className="self-stretch my-auto text-stone-500">Home</Link>
+              {breadcrumbIcon}
               <div className="self-stretch my-auto text-blue-500">News</div>
             </div>
             <div className="flex-1 shrink mt-2.5 w-full text-3xl tracking-tighter text-gray-700 max-md:max-w-full">
@@ -58,13 +56,16 @@ function NewsPage(props: NewsPageProps) {
             </div>
           </div>
           <div className="flex flex-wrap gap-8 mt-8 w-full max-md:max-w-full">
-            <div className="flex flex-col self-start p-5 bg-white rounded-lg border border-solid border-slate-200 min-w-[240px] w-[790px] max-md:max-w-full">
-              <div className="flex overflow-hidden flex-col max-w-full rounded-lg bg-neutral-100 w-[748px]">
-                <img
-                  loading="lazy"
+            <div className="flex flex-col self-start p-5 bg-white rounded-lg border border-solid border-slate-200 min-w-[240px] xl:w-[790px] max-md:max-w-full">
+              <div className="flex overflow-hidden flex-col max-w-full rounded-lg bg-neutral-100 xl:w-[748px]">
+                <Image
                   src={topNews?.[0]?.thumbnail}
-                  className="object-cover h-[421px] w-[748px] max-md:max-w-full"
+                  alt={topNews?.[0]?.title}
+                  height={421}
+                  width={748}
+                  className="object-cover lg:w-full lg:h-[35vh]"
                 />
+
               </div>
               <div className="flex flex-col mt-5 w-full max-md:max-w-full">
                 <div className="flex flex-col w-full max-md:max-w-full">
@@ -81,7 +82,7 @@ function NewsPage(props: NewsPageProps) {
                       DAYJS_FORMAT_DATE_VN
                     )}
                   </div>
-                  <button className="flex gap-2 items-start font-semibold text-[#2684FF] items-center">
+                  <button className="flex gap-2 font-semibold text-[#2684FF] items-center">
                     <span>
                       <Link href={`/news/${topNews?.[0]?.slug}`}></Link>Read
                       more
@@ -115,7 +116,7 @@ function NewsPage(props: NewsPageProps) {
                 More
               </div>
             </div>
-            <div className="flex flex-wrap gap-8 items-start mt-8 w-full">
+            <div className="flex flex-wrap xl:gap-8 lg:gap-4 gap-2 items-start mt-8 w-full">
               {newsList.map((article) => (
                 <NewsCard key={article.id} item={article} />
               ))}

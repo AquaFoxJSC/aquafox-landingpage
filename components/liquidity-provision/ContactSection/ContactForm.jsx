@@ -43,8 +43,8 @@ function ContactForm() {
         USER_ID
       );
       message.success("Send Request successfully");
-      form.resetFields()
-      setSelectedService('')
+      form.resetFields();
+      setSelectedService("");
     } catch (err) {
       console.log(err);
       message.success("Send Request failed");
@@ -105,13 +105,13 @@ function ContactForm() {
       </Form.Item>
 
       <Form.Item>
-        <Button
+        <button
           type="primary"
           htmlType="submit"
-          className="btn-contact-us w-fit mt-[24px]"
+          className="btn-contact-us w-fit mt-[24px] border-0"
         >
           Send
-        </Button>
+        </button>
       </Form.Item>
 
       <div className="mt-6 text-[#3B404F]">

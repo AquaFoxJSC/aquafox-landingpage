@@ -27,10 +27,6 @@ export default async function Home() {
       <Partners />
       <NewsSection newsList={apiRs?.data?.data?.items || []}/>
       <Contact />
-      {/* <Expertise/>
-      <OurWorks />
-      <OurClients />
-      <Contact/> */}
     </div>
   );
 }

@@ -120,113 +120,111 @@ const LiquidityProvision = () => {
         }}
       >
         <div
-          className={`sticky top-0 flex flex-col justify-center items-center bg-custom-3`}
-          style={{ height: `${100}vh` }}
+          className={`sticky top-0 flex flex-col justify-center items-center bg-custom-3 lg:h-[100vh] `}
         >
-          <div className="relative bg-white py-[60px] px-[90px] border-[20px] border-solid border-[#EAF2FF]">
+          <div className="relative bg-white py-[60px] lg:px-[90px] px-3 lg:border-[20px] lg:border-solid border-[#EAF2FF]">
             <div
-              className={`text-[#0836A1] text-center text-4xl not-italic font-medium leading-[60px] tracking-[-1.08px] mb-[60px]`}
+              className={`text-[#0836A1] text-center text-4xl not-italic font-medium leading-[60px] tracking-[-1.08px] lg:mb-[60px] lg:mt-0 mt-5`}
             >
               Liquidity Provision
             </div>
 
+            <div className="flex lg:flex-row flex-col gap-[60px]">
+              <div className="flex lg:translate-x-1 translate-x-[-10px lg:order-0 order-1 items-center">
+                <div className="flex flex-col items-center gap-[5px] lg:w-auto w-[10%] lg:pr-0 pr-[10px]">
+                  <div
+                    className={`w-[10px] h-[10px] ${
+                      activeItem >= 0 ? "bg-[#2684FF]" : "bg-[#B4C3D6]"
+                    } rounded-full mb-[38px]`}
+                  ></div>
+                  {activeItem >= 1 ? (
+                    <div className="w-[77px] h-[1px] rotate-90 bg-gradient-custom"></div>
+                  ) : (
+                    <div className="w-[77px] h-[1px] rotate-90 bg-[#B4C3D6]"></div>
+                  )}
 
-            <div className="flex gap-[60px]">
-              <div className="flex">
-              <div className="flex flex-col items-center gap-[5px]">
-                <div
-                  className={`w-[10px] h-[10px] ${
-                    activeItem >= 0 ? "bg-[#2684FF]" : "bg-[#B4C3D6]"
-                  } rounded-full my-[38px]`}
-                ></div>
-                {activeItem >= 1 ? (
-                  <div className="w-[77px] h-[1px] rotate-90 bg-gradient-custom"></div>
-                ) : (
-                  <div className="w-[77px] h-[1px] rotate-90 bg-[#B4C3D6]"></div>
-                )}
+                  <div
+                    className={`w-[10px] h-[10px] ${
+                      activeItem >= 1 ? "bg-[#2684FF]" : "bg-[#B4C3D6]"
+                    } rounded-full my-[38px]`}
+                  ></div>
+                  {activeItem >= 2 ? (
+                    <div className="w-[77px] h-[1px] rotate-90 bg-gradient-custom"></div>
+                  ) : (
+                    <div className="w-[77px] h-[1px] rotate-90 bg-[#B4C3D6]"></div>
+                  )}
 
-                <div
-                  className={`w-[10px] h-[10px] ${
-                    activeItem >= 1 ? "bg-[#2684FF]" : "bg-[#B4C3D6]"
-                  } rounded-full my-[38px]`}
-                ></div>
-                {activeItem >= 2 ? (
-                  <div className="w-[77px] h-[1px] rotate-90 bg-gradient-custom"></div>
-                ) : (
-                  <div className="w-[77px] h-[1px] rotate-90 bg-[#B4C3D6]"></div>
-                )}
-
-                <div
-                  className={`w-[10px] h-[10px] ${
-                    activeItem >= 2 ? "bg-[#2684FF]" : "bg-[#B4C3D6]"
-                  } rounded-full my-[38px]`}
-                ></div>
-              </div>
-              <div className="flex flex-col justify-center self-stretch my-auto min-w-[240px] max-md:max-w-full">
-                <div className="flex gap-2 items-center self-start text-base tracking-tight text-blue-500">
-                  {/* Fade hiệu ứng cho icon và title */}
-                  <div className={`flex items-center gap-2 ${fade}`}>
-                    <img
-                      loading="lazy"
-                      src={liquiditySteps[currentStep].icon}
-                      alt=""
-                      className="object-contain shrink-0 self-stretch my-auto w-4 aspect-square"
-                    />
-                    <div className="self-stretch my-auto">
-                      {liquiditySteps[currentStep].title}
+                  <div
+                    className={`w-[10px] h-[10px] ${
+                      activeItem >= 2 ? "bg-[#2684FF]" : "bg-[#B4C3D6]"
+                    } rounded-full mt-[38px]`}
+                  ></div>
+                </div>
+                <div className="flex flex-col justify-center self-stretch my-auto min-w-[240px] max-md:max-w-full">
+                  <div className="flex gap-2 items-center self-start text-base tracking-tight text-blue-500">
+                    {/* Fade hiệu ứng cho icon và title */}
+                    <div className={`flex items-center gap-2 ${fade}`}>
+                      <img
+                        loading="lazy"
+                        src={liquiditySteps[currentStep].icon}
+                        alt=""
+                        className="object-contain shrink-0 self-stretch my-auto w-4 aspect-square"
+                      />
+                      <div className="self-stretch my-auto">
+                        {liquiditySteps[currentStep].title}
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex flex-col px-8 pt-8 pb-14 mt-5 max-w-full bg-blue-50 rounded h-[160px] lg:w-[440px] max-md:px-5">
+                    <div className="flex flex-col w-full">
+                      <div className="self-start text-4xl font-medium tracking-tighter text-center bg-clip-text special-text">
+                        {liquiditySteps[currentStep].heading}
+                      </div>
+                      {/* Fade hiệu ứng cho phần mô tả */}
+                      <div
+                        className={`mt-2.5 text-base tracking-tight text-gray-700 ${fade}`}
+                      >
+                        {liquiditySteps[currentStep].description}
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div className="flex flex-col px-8 pt-8 pb-14 mt-5 max-w-full bg-blue-50 rounded h-[160px] w-[440px] max-md:px-5">
-                  <div className="flex flex-col w-full">
-                    <div className="self-start text-4xl font-medium tracking-tighter text-center bg-clip-text special-text">
-                      {liquiditySteps[currentStep].heading}
-                    </div>
-                    {/* Fade hiệu ứng cho phần mô tả */}
-                    <div
-                      className={`mt-2.5 text-base tracking-tight text-gray-700 ${fade}`}
-                    >
-                      {liquiditySteps[currentStep].description}
-                    </div>
-                  </div>
-                </div>
               </div>
-              </div>
-              
-              <div className="relative">
-                <div className="absolute z-10 top-[-10px] flex overflow-hidden flex-col flex-1 shrink self-stretch my-auto basis-0 max-md:max-w-full">
+
+              <div className="relative lg:order-1 order-0">
+                <div className="absolute z-10 top-[-10px] flex overflow-hidden flex-1 shrink self-stretch my-auto basis-0 max-md:max-w-full">
                   <div className="px-3 pt-2.5 max-md:pr-5 max-md:pb-24">
-                    <div className="flex max-md:flex-col gap-[15px]">
+                    <div className="flex gap-[15px]">
                       <div className="flex flex-col max-md:ml-0 max-md:w-full">
-                        <div className="grow gap-2.5 self-stretch py-1 pr-3 pl-3.5 text-base text-white whitespace-nowrap bg-[#FF0000] rounded-md min-h-[24px] max-md:mt-6">
+                        <div className="grow gap-2.5 self-stretch py-1 pr-3 pl-3.5 lg:text-base text-sm text-white whitespace-nowrap bg-[#FF0000] rounded-md max-md:mt-6">
                           Ask
                         </div>
                       </div>
                       <div className="flex flex-col max-md:ml-0 max-md:w-full">
-                        <div className="grow gap-2.5 self-stretch py-1 pr-2 pl-2.5 text-base text-white whitespace-nowrap bg-[#93C2FF] rounded-md min-h-[24px] max-md:mt-6">
+                        <div className="grow gap-2.5 self-stretch py-1 pr-2 pl-2.5 lg:text-base text-sm text-white whitespace-nowrap bg-[#93C2FF] rounded-md max-md:mt-6">
                           Spread
                         </div>
                       </div>
                       <div className="flex flex-col max-md:ml-0 max-md:w-full">
-                        <div className="grow gap-2.5 self-stretch px-3.5 py-1 text-base text-white whitespace-nowrap bg-[#199600] rounded-md min-h-[24px] max-md:mt-6">
+                        <div className="grow gap-2.5 self-stretch px-3.5 py-1 lg:text-base text-sm text-white whitespace-nowrap bg-[#199600] rounded-md max-md:mt-6">
                           Bid
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="absolute bottom-[-20px] flex overflow-hidden flex-col flex-1 shrink self-stretch my-auto basis-0 w-full max-md:max-w-full">
-                  <div className="flex gap-5 justify-between mt-3 text-base whitespace-nowrap max-md:max-w-full">
+                <div className="absolute bottom-[-20px] flex overflow-hiddenflex-1 shrink self-stretch my-auto basis-0 w-full max-md:max-w-full">
+                  <div className="flex gap-5 justify-between mt-3 lg:text-base text-sm whitespace-nowrap max-md:max-w-full w-full">
                     <div
                       className={`gap-2.5 self-stretch py-1.5 pr-2.5 pl-2.5 text-blue-50 ${
-                        activeItem === 2 ? "bg-[#9EB6DD]" : "bg-blue-500"
+                        activeItem === 2 ? "bg-[#9EB6DD]" : "bg-[#2684FF]"
                       }  rounded-md min-h-[29px]`}
                     >
                       BEFORE
                     </div>
                     <div
                       className={`gap-2.5 self-stretch px-4 py-1.5 text-white ${
-                        activeItem === 2 ? "bg-blue-500" : "bg-[#9EB6DD]"
+                        activeItem === 2 ? "bg-[#2684FF]" : "bg-[#9EB6DD]"
                       } rounded-md min-h-[29px]`}
                     >
                       AFTER
@@ -237,19 +235,19 @@ const LiquidityProvision = () => {
               </div>
             </div>
 
-              <div
-                className={`mt-[60px] flex justify-center`} style={{visibility: activeItem === 2 ? 'visible' : 'hidden'}}
+            <div
+              className={`lg:mt-[60px] mt-2 flex justify-center`}
+              style={{ visibility: activeItem === 2 ? "visible" : "hidden" }}
+            >
+              <button
+                className="cursor-pointer flex gap-2 justify-center items-center px-6 py-3.5 mt-2.5 text-base font-semibold tracking-tight text-blue-500 rounded border-2 border-blue-500 border-solid min-h-[46px] max-md:px-5"
+                tabIndex={0}
+                aria-label="Learn more"
               >
-                <button
-                  className="cursor-pointer flex gap-2 justify-center items-center px-6 py-3.5 mt-2.5 text-base font-semibold tracking-tight text-blue-500 rounded border-2 border-blue-500 border-solid min-h-[46px] max-md:px-5"
-                  tabIndex={0}
-                  aria-label="Learn more"
-                >
-                  <div className="self-stretch my-auto">Learn more</div>
-                  {arrowActionIcon}
-                </button>
-              </div>
-
+                <div className="self-stretch my-auto">Learn more</div>
+                {arrowActionIcon}
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -264,15 +262,10 @@ const svgMain = (yTransform) => (
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
     viewBox="0 0 350 280"
+    preserveAspectRatio="xMidYMid meet"
+    className="w-full"
     width={350}
     height={280}
-    preserveAspectRatio="xMidYMid meet"
-    style={{
-      width: "100%",
-      height: "100%",
-      transform: "translate3d(0px, 0px, 0px)",
-      contentVisibility: "visible",
-    }}
   >
     <defs>
       <clipPath id="__lottie_element_172">
