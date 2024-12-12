@@ -92,7 +92,7 @@ function Header() {
                     pathname === "/liquidity-provision" ? "#2684FF" : "#666666",
                 }}
               >
-                Service
+                Services
                 {arrowDown}
               </div>
             </DropdownTrigger>
