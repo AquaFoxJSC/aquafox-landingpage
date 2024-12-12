@@ -2,7 +2,6 @@ import React from "react";
 import Link from "next/link";
 import dayjs from "dayjs";
 import { DAYJS_FORMAT_DATE } from "@/constant/constants";
-import BreadcrumbComponent from "../common/BreadcrumbComponent";
 import { breadcrumbIcon, linkedinIcon, phoneIcon, tgIcon, xIcon } from "@/constant/svg";
 
 const telegram = (
@@ -100,25 +99,13 @@ function NewsDetailPage(props: NewsDetailPageProps) {
               </div>
             </div>
           </div>
-          {/* {!!data?.tags?.length && (
-            <div className="tags-section flex justify-end gap-2 flex-1 flex-wrap">
-              {(data?.tags || []).map((tag: any, index: any) => (
-                <div
-                  key={index}
-                  className="tag-item bg-[#f6f6f6] text-[#585757] text-base rounded-[40px] px-3 flex items-center"
-                >
-                  {tag}
-                </div>
-              ))}
-            </div>
-          )} */}
+
         </div>
         {data?.thumbnail && (
           <img
             className="thumnail-img w-full aspect-video mb-5 rounded-[10px] object-cover"
             src={
-              data?.thumbnail ||
-              "/images/blogListPage/default-blog-thumbnail.svg"
+              data?.thumbnail
             }
             alt="thumbnail"
           />
@@ -136,11 +123,11 @@ function NewsDetailPage(props: NewsDetailPageProps) {
         />
       </div>
       <div className="flex flex-wrap gap-10 justify-between items-center pt-9">
-        <div className="flex gap-2.5 items-start self-stretch my-auto text-base font-medium tracking-tight text-[#2684FF] min-w-[240px]">
+        <div className="flex flex-wrap gap-2.5 items-start self-stretch my-auto text-base font-medium tracking-tight text-[#2684FF] min-w-[240px]">
           {data?.tags.map((tag, index) => (
-            <div key={tag} className="gap-2.5 self-stretch px-2.5 py-1.5 whitespace-nowrap bg-[#E9F5FF] rounded-3xl">
+            <Link href={`/news?tag=${tag.replaceAll(" ", "-")}`} key={tag} className="gap-2.5 self-stretch px-2.5 py-1.5 whitespace-nowrap bg-[#E9F5FF] rounded-3xl">
               {tag}
-            </div>
+            </Link>
           ))}
         </div>
         <div className="flex gap-5 items-center self-stretch my-auto text-white">

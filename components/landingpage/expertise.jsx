@@ -63,7 +63,7 @@ function Expertise() {
           <div className="ept-img">
             <Image
               src="/images/expertise/expertise2.png"
-              alt="Vercel Logo"
+              alt="Liquidity-ptovision"
               className="expertise-img"
               width={380}
               height={351}
@@ -76,7 +76,7 @@ function Expertise() {
             <div className="ept-icon">
               <Image
                 src="/images/icons/flatform-icon.png"
-                alt="Vercel Logo"
+                alt="Liquidity-ptovision"
                 width={28}
                 height={28}
                 priority
@@ -91,11 +91,11 @@ function Expertise() {
           </div>
           <div className="ept-img">
             <Image
-              src="/images/expertise/expertise3.png"
-              alt="Vercel Logo"
+              src="/images/landingpage/high-frequency-trading.png"
+              alt="high-frequency-trading"
               className="expertise-img"
-              width={324}
-              height={363}
+              width={236}
+              height={218}
               priority
             />
           </div>

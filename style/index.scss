@@ -2,10 +2,31 @@ body {
   --gradient: linear-gradient(117deg, #26b1ff 24.98%, #1557ff 80.23%);
   font-family: "Work Sans", sans-serif;
   scroll-behavior: auto;
+  height: 100%; 
+  display: flex; 
+  flex-direction: column
+}
+
+.content {
+  flex: 1;
+}
+
+nav {
+  position: static !important; /* Hoặc không khai báo `position` */
+}
+
+
+.dropdown-click {
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  transform: none;
+  transform: none !important;
+  scale: 1 !important;
+  transition: none !important; /* Ngăn chặn hiệu ứng chuyển đổi */
 }
 
 .bg-gradient-custom {
-  background: linear-gradient(90deg, #B4C3D6 0%, #2684FF 78.5%);
+  background: linear-gradient(90deg, #b4c3d6 0%, #2684ff 78.5%);
 }
 
 .bg-custom-1 {
@@ -32,6 +53,15 @@ body {
 .line-clamp-3 {
   display: -webkit-box;
   -webkit-line-clamp: 3; /* Giới hạn 3 dòng */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -68,7 +98,6 @@ body {
   animation: fadeOut 0.3s ease-in-out forwards;
 }
 
-
 .btn-contact-us {
   display: flex;
   height: 46px;
@@ -76,7 +105,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
-  border-radius: 2px;
+  border-radius: 10px;
   background: var(--gradient);
   color: #fff;
   font-size: 16px;
@@ -84,7 +113,6 @@ body {
   font-weight: 500;
   line-height: normal;
   letter-spacing: -0.32px;
-  border-radius: 4px;
 }
 
 .footer {
@@ -122,7 +150,10 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
+.hero-info {
+  position: relative;
+  z-index: 1;
+}
 .landing-page {
   h1 {
     color: var(--Curious-Blue-950, #0f162f);
@@ -139,7 +170,7 @@ body {
   .hero-img {
     display: flex;
     justify-content: center;
-    margin-top: -100px;
+    margin-top: -230px;
   }
 
   .hero-section {
@@ -147,7 +178,7 @@ body {
     background-position: 100% 100%;
     background-repeat: no-repeat;
     background-size: cover;
-    padding-top: 96px;
+    padding-top: 40px;
   }
 
   .sub-title {
@@ -259,13 +290,16 @@ body {
   }
 
   .contact-section {
-    background: linear-gradient(175deg, #fff 16.91%, #004eff 102.75%);
+    background: linear-gradient(175deg, #fff 16.91%, #beddff 102.75%);
     padding-top: 85px;
     padding-bottom: 110px;
     display: flex;
     justify-content: center;
     padding-left: 52px;
     padding-right: 52px;
+    @media screen and (max-width: 767px) {
+      padding: 24px;
+    }
   }
 
   .contact-img-left {
@@ -274,7 +308,6 @@ body {
   }
 
   .contact-img-right {
-    bottom: 0;
     right: 0;
   }
 
@@ -282,6 +315,9 @@ body {
     position: relative;
     overflow: hidden;
     padding-top: 120px;
+    @media screen and (max-width: 767px) {
+      padding-top: 20px;
+    }
   }
 
   .contact-img {
@@ -581,8 +617,8 @@ body {
 
 @media screen and (max-width: 767px) {
   .btn-contact-us {
-    height: 36px;
-    padding: 0 10px;
+    // height: 36px;
+    // padding: 0 10px;
   }
   .footer {
     display: block;
@@ -607,7 +643,7 @@ body {
     }
 
     h1 {
-      font-size: 48px;
+      font-size: 36px;
     }
 
     .expertise-section {
@@ -664,8 +700,7 @@ body {
     }
 
     .contact-card {
-      padding-left: 30px;
-      padding-right: 30px;
+      padding: 24px;
       text-align: center;
       backdrop-filter: none;
       max-width: 98%;
@@ -673,6 +708,7 @@ body {
 
     .contact-title {
       font-size: 24px;
+      line-height: 160%;
       text-align: center;
     }
 
@@ -845,4 +881,183 @@ body {
       font-weight: 400;
     }
   }
+}
+
+:where(.css-dev-only-do-not-override-142vneq).ant-pagination {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: rgba(0, 0, 0, 0.88);
+  font-size: 14px;
+  line-height: 1.5714285714285714;
+  list-style: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  display: flex;
+}
+
+:where(.css-dev-only-do-not-override-142vneq).ant-pagination
+  .ant-pagination-disabled,
+:where(.css-dev-only-do-not-override-142vneq).ant-pagination
+  .ant-pagination-disabled:hover {
+  cursor: not-allowed;
+}
+
+:where(.css-dev-only-do-not-override-142vneq).ant-pagination
+  .ant-pagination-prev,
+:where(.css-dev-only-do-not-override-142vneq).ant-pagination
+  .ant-pagination-next {
+  outline: 0;
+}
+:where(.css-dev-only-do-not-override-142vneq).ant-pagination
+  .ant-pagination-prev,
+:where(.css-dev-only-do-not-override-142vneq).ant-pagination
+  .ant-pagination-next,
+:where(.css-dev-only-do-not-override-142vneq).ant-pagination
+  .ant-pagination-jump-prev,
+:where(.css-dev-only-do-not-override-142vneq).ant-pagination
+  .ant-pagination-jump-next {
+  display: inline-block;
+  min-width: 32px;
+  height: 32px;
+  color: rgba(0, 0, 0, 0.88);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  line-height: 32px;
+  text-align: center;
+  vertical-align: middle;
+  list-style: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+:where(.css-dev-only-do-not-override-142vneq).ant-pagination
+  .ant-pagination-prev,
+:where(.css-dev-only-do-not-override-142vneq).ant-pagination
+  .ant-pagination-jump-prev,
+:where(.css-dev-only-do-not-override-142vneq).ant-pagination
+  .ant-pagination-jump-next {
+  margin-inline-end: 8px;
+}
+:where(.css-dev-only-do-not-override-142vneq).ant-pagination
+  [class^="ant-pagination"],
+:where(.css-dev-only-do-not-override-142vneq).ant-pagination
+  [class*=" ant-pagination"] {
+  box-sizing: border-box;
+}
+
+:where(.css-dev-only-do-not-override-142vneq).ant-pagination
+  .ant-pagination-disabled
+  .ant-pagination-item-link,
+:where(.css-dev-only-do-not-override-142vneq).ant-pagination
+  .ant-pagination-disabled:hover
+  .ant-pagination-item-link {
+  color: rgba(0, 0, 0, 0.25);
+  cursor: not-allowed;
+}
+
+:where(.css-dev-only-do-not-override-142vneq).ant-pagination
+  .ant-pagination-prev
+  .ant-pagination-item-link,
+:where(.css-dev-only-do-not-override-142vneq).ant-pagination
+  .ant-pagination-next
+  .ant-pagination-item-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  font-size: 12px;
+  text-align: center;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  outline: none;
+  transition: all 0.2s;
+}
+
+:where(.css-dev-only-do-not-override-142vneq).ant-pagination
+  .ant-pagination-prev
+  button,
+:where(.css-dev-only-do-not-override-142vneq).ant-pagination
+  .ant-pagination-next
+  button {
+  color: rgba(0, 0, 0, 0.88);
+  cursor: pointer;
+  user-select: none;
+}
+:where(.css-dev-only-do-not-override-142vneq).ant-pagination
+  [class^="ant-pagination"],
+:where(.css-dev-only-do-not-override-142vneq).ant-pagination
+  [class*=" ant-pagination"] {
+  box-sizing: border-box;
+}
+
+.anticon {
+  display: inline-flex;
+  align-items: center;
+  color: inherit;
+  font-style: normal;
+  line-height: 0;
+  text-align: center;
+  text-transform: none;
+  vertical-align: -0.125em;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:where(.css-dev-only-do-not-override-142vneq).ant-pagination
+  [class^="ant-pagination"],
+:where(.css-dev-only-do-not-override-142vneq).ant-pagination
+  [class*=" ant-pagination"] {
+  box-sizing: border-box;
+}
+:where(.css-dev-only-do-not-override-142vneq).ant-pagination
+  [class^="ant-pagination"],
+:where(.css-dev-only-do-not-override-142vneq).ant-pagination
+  [class*=" ant-pagination"] {
+  box-sizing: border-box;
+}
+:where(.css-dev-only-do-not-override-142vneq).ant-pagination
+  .ant-pagination-item-active {
+  font-weight: 600;
+  background-color: #ffffff;
+  border-color: #1677ff;
+}
+:where(.css-dev-only-do-not-override-142vneq).ant-pagination
+  .ant-pagination-item {
+  display: inline-block;
+  min-width: 32px;
+  height: 32px;
+  margin-inline-end: 8px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  line-height: 30px;
+  text-align: center;
+  vertical-align: middle;
+  list-style: none;
+  background-color: #ffffff;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  outline: 0;
+  cursor: pointer;
+  user-select: none;
+}
+
+:where(.css-dev-only-do-not-override-142vneq).ant-pagination
+  .ant-pagination-item-active {
+  font-weight: 600;
+  background-color: #ffffff;
+  border-color: #1677ff;
+}
+
+.ant-form-item-required {
+  display: none !important;
+}
+
+.ant-form-item-label {
+  display: none !important;
 }

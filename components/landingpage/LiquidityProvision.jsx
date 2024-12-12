@@ -1,13 +1,15 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import { arrowActionIcon } from "@/constant/svg";
+import { arrowActionIcon, commitmentIcon, effectiveIcon, starIcon } from "@/constant/svg";
+import Image from "next/image";
+import Link from "next/link";
 import React, { useState, useEffect, useRef } from "react";
 
 const liquiditySteps = [
   {
     id: 1,
-    icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/2faf2c37e2953e1e5c9d80fbfe70bc5dd3cd0663ee113dd96ae8cf6dfd5653f9?placeholderIfAbsent=true&apiKey=5f3d3068f7634759bee728f966e36875",
+    icon: starIcon,
     title: "Business Value",
     heading: "Improve",
     description: "Improving liquidity depth in the order books.",
@@ -16,7 +18,7 @@ const liquiditySteps = [
   },
   {
     id: 2,
-    icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/818bfc538557a986d38cad1693df038b4055d3dec906f80001dd4e24b6c436df?placeholderIfAbsent=true&apiKey=5f3d3068f7634759bee728f966e36875",
+    icon: effectiveIcon,
     title: "Effectiveness",
     heading: "Lower",
     description: "Lower the spread between the Bid & Ask",
@@ -25,7 +27,7 @@ const liquiditySteps = [
   },
   {
     id: 3,
-    icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/cac00da60cb018fa6b8cdc737373fca23fe1f97431176bf1e15626d2abbcc6bf?placeholderIfAbsent=true&apiKey=5f3d3068f7634759bee728f966e36875",
+    icon: commitmentIcon,
     title: "Commitment",
     heading: "Arbitrage",
     description: "Arbitrage between pairs, exchanges and liquidity pools.",
@@ -122,7 +124,7 @@ const LiquidityProvision = () => {
         <div
           className={`sticky top-0 flex flex-col justify-center items-center bg-custom-3 lg:h-[100vh] `}
         >
-          <div className="relative bg-white py-[60px] lg:px-[90px] px-3 lg:border-[20px] lg:border-solid border-[#EAF2FF]">
+          <div className="relative bg-white py-[20px] lg:px-[90px] px-3 lg:border-[20px] lg:border-solid border-[#EAF2FF]">
             <div
               className={`text-[#0836A1] text-center text-4xl not-italic font-medium leading-[60px] tracking-[-1.08px] lg:mb-[60px] lg:mt-0 mt-5`}
             >
@@ -162,14 +164,9 @@ const LiquidityProvision = () => {
                 </div>
                 <div className="flex flex-col justify-center self-stretch my-auto min-w-[240px] max-md:max-w-full">
                   <div className="flex gap-2 items-center self-start text-base tracking-tight text-blue-500">
-                    {/* Fade hiệu ứng cho icon và title */}
                     <div className={`flex items-center gap-2 ${fade}`}>
-                      <img
-                        loading="lazy"
-                        src={liquiditySteps[currentStep].icon}
-                        alt=""
-                        className="object-contain shrink-0 self-stretch my-auto w-4 aspect-square"
-                      />
+                      {liquiditySteps[currentStep].icon}
+
                       <div className="self-stretch my-auto">
                         {liquiditySteps[currentStep].title}
                       </div>
@@ -239,14 +236,14 @@ const LiquidityProvision = () => {
               className={`lg:mt-[60px] mt-2 flex justify-center`}
               style={{ visibility: activeItem === 2 ? "visible" : "hidden" }}
             >
-              <button
-                className="cursor-pointer flex gap-2 justify-center items-center px-6 py-3.5 mt-2.5 text-base font-semibold tracking-tight text-blue-500 rounded border-2 border-blue-500 border-solid min-h-[46px] max-md:px-5"
+              <Link href="/liquidity-provision"
+                className="cursor-pointer flex gap-2 justify-center items-center px-6 py-3.5 mt-2.5 text-base font-semibold tracking-tight text-blue-500 rounded-[10px] border-2 border-blue-500 border-solid min-h-[46px] max-md:px-5"
                 tabIndex={0}
                 aria-label="Learn more"
               >
                 <div className="self-stretch my-auto">Learn more</div>
                 {arrowActionIcon}
-              </button>
+              </Link>
             </div>
           </div>
         </div>

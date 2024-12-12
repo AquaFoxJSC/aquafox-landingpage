@@ -38,12 +38,12 @@ export default function IntroFeature() {
       <div className="flex flex-wrap gap-10 self-stretch my-auto min-w-[240px] w-[1250px] items-center">
         <div className="flex-col px-9 min-w-[240px] w-[316px] max-md:px-5 xl:flex hidden">
           <Image
-              src="/images/expertise/expertise2.png"
-              alt="Vercel Logo"
-              className="object-contain z-10 mt-0 w-full aspect-[1.08]"
+              src="/images/landingpage/liquidity-provision.png"
+              alt="liquidity-provision"
+              className="object-contain z-10 mt-0"
               width={236}
               height={218}
-              priority
+              quality={100}
             />
         </div>
         <div className="border-0 xl:border-l-[1px] border-l-0 xl:pl-[60px] pl-[0]  border-solid border-[#DCDCDC] lg:flex-row flex-col flex flex-wrap flex-1 shrink gap-10 items-center my-auto basis-[72px] min-w-[240px] max-md:max-w-full">

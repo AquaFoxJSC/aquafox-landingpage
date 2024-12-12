@@ -31,20 +31,20 @@ function Contact() {
       </div>
       <div className="contact-img contact-img-left">
         <Image
-          src="/images/footer/left.png"
-          alt="Logo"
-          width={492}
-          height={608}
-          priority
+          src="/images/landingpage/contact-left.png"
+          alt="footer"
+          width={588}
+          height={600}
+          quality={100}
         />
       </div>
-      <div className="contact-img contact-img-right">
+      <div className="contact-img bottom-[-50%] contact-img-right ">
         <Image
-          src="/images/footer/right.png"
-          alt="Logo"
-          width={448}
-          height={352}
-          priority
+          src="/images/landingpage/contact-right.png"
+          alt="footer"
+          width={551}
+          height={551}
+          quality={100}
         />
       </div>
     </div>

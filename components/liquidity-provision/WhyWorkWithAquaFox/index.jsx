@@ -4,33 +4,40 @@ import BenefitCard from "./BenefitCard";
 const benefitCards = [
   {
     id: 1,
-    imageUrl: "https://cdn.builder.io/api/v1/image/assets/TEMP/716ba42e81ca8a8bfccef7ee4242a030468d4454fcf2f3c885d29ece5bee2939?placeholderIfAbsent=true&apiKey=5f3d3068f7634759bee728f966e36875",
-    description: "Daily market reports are available to all trading counterparties"
+    imageUrl: "/images/why-aquafox/i1.png",
+    description: "Daily market reports are available to all trading counterparties",
+    width: 50
   },
   {
     id: 2,
-    imageUrl: "https://cdn.builder.io/api/v1/image/assets/TEMP/439de37d32777bd944a8a99b4311ac29a17757da03c4b71964bec4c05120ab87?placeholderIfAbsent=true&apiKey=5f3d3068f7634759bee728f966e36875",
-    description: "Our team has experience trading with established and nascent projects"
+    imageUrl: "/images/why-aquafox/i2.png",
+    description: "Our team has experience trading with established and nascent projects",
+    width: 51
+    
   },
   {
     id: 3,
-    imageUrl: "https://cdn.builder.io/api/v1/image/assets/TEMP/a0a2b8647720d25ff1e3b5ded2bd4ec5a0fa6eb162b7d9bfcc887e03aa299763?placeholderIfAbsent=true&apiKey=5f3d3068f7634759bee728f966e36875",
-    description: "Robust Liquidity – spread and order book KPIs"
+    imageUrl: "/images/why-aquafox/i3.png",
+    description: "Robust Liquidity – spread and order book KPIs",
+    width: 51
   },
   {
     id: 4,
-    imageUrl: "https://cdn.builder.io/api/v1/image/assets/TEMP/b1b852202b119577620d06d8a45dca7e7949ee85341664f0a2687ada17025986?placeholderIfAbsent=true&apiKey=5f3d3068f7634759bee728f966e36875",
-    description: "Our software measures performance on the most granular level, allowing for full visibility and flexibility"
+    imageUrl: "/images/why-aquafox/i4.png",
+    description: "Our software measures performance on the most granular level, allowing for full visibility and flexibility",
+    width: 50
   },
   {
     id: 5,
-    imageUrl: "https://cdn.builder.io/api/v1/image/assets/TEMP/0bc242ee68f98e759f244281c9f195b2e838f328e942b28b81986aba4ae7303c?placeholderIfAbsent=true&apiKey=5f3d3068f7634759bee728f966e36875",
-    description: "Deep liquidity provisioning across both centralized and decentralized venues"
+    imageUrl: "/images/why-aquafox/i5.png",
+    description: "Deep liquidity provisioning across both centralized and decentralized venues",
+    width: 51
   },
   {
     id: 6,
-    imageUrl: "https://cdn.builder.io/api/v1/image/assets/TEMP/b0023c251abe0e70a146cb1c40411d96ae5da9e9dbd06c1eb94f6734a958ae49?placeholderIfAbsent=true&apiKey=5f3d3068f7634759bee728f966e36875",
-    description: "Through a thorough examination of your exchange and trading ecosystem we learn your needs and set achievable goals"
+    imageUrl: "/images/why-aquafox/i6.png",
+    description: "Through a thorough examination of your exchange and trading ecosystem we learn your needs and set achievable goals",
+    width: 51
   }
 ];
 
@@ -49,6 +56,7 @@ export default function WhyWorkWithAquaFox() {
             key={card.id}
             imageUrl={card.imageUrl}
             description={card.description}
+            width={card.width}
           />
         ))}
       </div>
@@ -58,6 +66,7 @@ export default function WhyWorkWithAquaFox() {
             key={card.id}
             imageUrl={card.imageUrl}
             description={card.description}
+            width={card.width}
           />
         ))}
       </div>

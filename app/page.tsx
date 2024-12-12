@@ -10,6 +10,7 @@ import StatsSection from "../components/landingpage/StatsSection";
 import Partners from "../components/landingpage/Partners";
 import NewsSection from "../components/news/NewsSection";
 import newsApis from "@/apis/newsApis";
+import 'antd/dist/reset.css';
 
 export default async function Home() {
   const apiRs = await newsApis.getAllNews({

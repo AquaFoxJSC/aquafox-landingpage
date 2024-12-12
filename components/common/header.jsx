@@ -14,7 +14,7 @@ import {
 import Image from "next/image";
 import { Button, Drawer } from "antd";
 import { usePathname } from "next/navigation";
-import { arrowDown } from "@/constant/svg";
+import { arrowDown, burgerIcon } from "@/constant/svg";
 
 export const ChevronDown = ({ fill, size, height, width, ...props }) => {
   return (
@@ -52,21 +52,24 @@ function Header() {
   const pathname = usePathname();
 
   return (
-    <Navbar className="py-[16px] bg-white" maxWidth="xl">
-      <NavbarBrand>
+    <header>
+    <Navbar className="py-[4px] bg-white" maxWidth="xl">
+      <NavbarBrand >
         <Link href="/">
           <Image
-            src="/images/logo_v3.png"
-            alt="Vercel Logo"
-            width={250}
-            height={46}
+            src="/images/logo_v4.png"
+            alt="Logo"
+            width={218}
+            height={40}
             priority
+            quality={100}
+            className="max-md:w-[163.5px]"
           />
         </Link>
       </NavbarBrand>
       <NavbarContent
         className="hidden sm:flex"
-        style={{ gap: "3rem", fontWeight: 500 }}
+        style={{ gap: "3rem", fontWeight: 500, marginBottom: 0 }}
         justify="center"
       >
         <NavbarItem>
@@ -81,10 +84,14 @@ function Header() {
         </NavbarItem>
         <Dropdown>
           <NavbarItem>
-            <DropdownTrigger >
-              <div className="flex cursor-pointer items-center justify-center gap-1" style={{
-              color: pathname === "/liquidity-provision" ? "#2684FF" : "#666666",
-            }}>
+            <DropdownTrigger>
+              <div
+                className="flex cursor-pointer items-center justify-center gap-1 dropdown-click"
+                style={{
+                  color:
+                    pathname === "/liquidity-provision" ? "#2684FF" : "#666666",
+                }}
+              >
                 Service
                 {arrowDown}
               </div>
@@ -97,40 +104,26 @@ function Header() {
               // startContent={icons.scale}
             >
               <Link
-              href="/liquidity-provision"
-              style={{
-                color:
-                  pathname === "/liquidity-provision" ? "#2684FF" : "#666666",
-              }}
-            >
-              Liquidity Provision
-            </Link>
+                href="/liquidity-provision"
+                style={{
+                  color:
+                    pathname === "/liquidity-provision" ? "#2684FF" : "#666666",
+                }}
+              >
+                Liquidity Provision
+              </Link>
             </DropdownItem>
             <DropdownItem
               key="autoscaling"
               className="hover:bg-gray-100 rounded-md text-sm"
               // startContent={icons.scale}
             >
-              <Link href="/coming-soon" className="text-[#666666]">High-Frequency Trading</Link>
+              <Link href="/coming-soon" className="text-[#666666]">
+                High-Frequency Trading
+              </Link>
             </DropdownItem>
           </DropdownMenu>
         </Dropdown>
-        {/* <Dropdown overlay={menuService} trigger={["hover"]}>
-          <div
-            className="flex"
-            // style={{
-            //   color: pathname === "/" ? "#2684FF" : "#666666",
-            // }}
-          >
-            Service
-            <img
-              loading="lazy"
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/1ac741283b4a88e84635b3b48c5758e7f5b484bba28aba1f9eaecacb2079bc3e?placeholderIfAbsent=true&apiKey=5f3d3068f7634759bee728f966e36875"
-              alt=""
-              className="object-contain shrink-0 self-stretch my-auto w-5 aspect-square"
-            />
-          </div>
-        </Dropdown> */}
         {/* <NavbarItem>
           <Link
             href="/contact"
@@ -152,34 +145,20 @@ function Header() {
           </Link>
         </NavbarItem>
       </NavbarContent>
-      <NavbarContent className="hidden sm:flex" justify="end">
+      <NavbarContent className="hidden sm:flex" justify="end" style={{ marginBottom: 0 }}>
         <NavbarItem>
           <Link href="/contact">
             <button className="btn-contact-us">Get in touch</button>
           </Link>
         </NavbarItem>
       </NavbarContent>
-      <Button
+      <button
         onClick={() => setOpen(true)}
-        className="block sm:hidden h-full"
+        className="sm:hidden w-[40px] h-[40px] flex justify-center items-center bg-[#F2F4F7] rounded-[12px]"
         type="text"
       >
-        <svg
-          viewBox="0 0 12 12"
-          enableBackground="new 0 0 12 12"
-          version="1.1"
-          xmlSpace="preserve"
-          fill="black"
-          width={30}
-          height={30}
-        >
-          <g>
-            <rect fill="#1D1D1B" height="1" width="11" x="0.5" y="5.5" />
-            <rect fill="#1D1D1B" height="1" width="11" x="0.5" y="2.5" />
-            <rect fill="#1D1D1B" height="1" width="11" x="0.5" y="8.5" />
-          </g>
-        </svg>
-      </Button>
+        {burgerIcon}
+      </button>
 
       <Drawer
         placement="right"
@@ -190,11 +169,7 @@ function Header() {
       >
         <div className="flex flex-col gap-6 items-center">
           <NavbarItem>
-            <Link
-              color="foreground"
-              href="/"
-              onClick={() => setOpen(false)}
-            >
+            <Link color="foreground" href="/" onClick={() => setOpen(false)}>
               Home
             </Link>
           </NavbarItem>
@@ -213,13 +188,15 @@ function Header() {
             </Link>
           </NavbarItem>
           <NavbarItem>
-          <Link href="/contact">
-            <button className="btn-contact-us">Get in touch</button>
-          </Link>
-        </NavbarItem>
+            <Link href="/contact">
+              <button className="btn-contact-us">Get in touch</button>
+            </Link>
+          </NavbarItem>
         </div>
       </Drawer>
     </Navbar>
+    </header>
+
   );
 }
 

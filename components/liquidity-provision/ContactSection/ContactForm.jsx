@@ -1,6 +1,6 @@
 "use client";
 import * as React from "react";
-import { Form, Input, Button, Dropdown, Menu, message } from "antd";
+import { Form, Input, Dropdown, Menu, message } from "antd";
 import { arrowDown } from "@/constant/svg";
 import { send } from "emailjs-com";
 
@@ -11,7 +11,7 @@ const SERVICE_ID = "service_lneq30g"; // serviceID
 const formFields = [
   { label: "Full name", name: "fullName", type: "text", required: true },
   { label: "Business E-mail", name: "email", type: "email", required: true },
-  { label: "Phone Number", name: "phone", type: "tel", required: false },
+  { label: "Telegram", name: "tg", type: "text", required: false },
 ];
 
 const menu = (onChange) => (
@@ -32,7 +32,7 @@ function ContactForm() {
     try {
       const messageContent = `Full name: ${values.fullName}\n
       Email: ${values.email}\n
-      Phone: ${values.phone || ""}\n
+      Telegram: ${values.tg || ""}\n
       Service: ${values.service}\n`;
       await send(
         SERVICE_ID,
@@ -76,7 +76,7 @@ function ContactForm() {
               message: `${field.label} is required!`,
             },
           ]}
-          labelCol={{ span: 0 }} // Hide the label
+          // labelCol={{ span: 0 }} // Hide the label
           wrapperCol={{ span: 24 }} // Ensure the input takes up full width
         >
           <Input
@@ -96,7 +96,10 @@ function ContactForm() {
       >
         <Dropdown overlay={menu(handleServiceChange)} trigger={["click"]}>
           <div className="flex flex-wrap gap-2.5 items-center p-2.5 w-full border-b border-indigo-300 max-md:max-w-full cursor-pointer">
-            <div className="flex-1 shrink self-stretch my-auto basis-0 max-md:max-w-full">
+            <div
+              className="flex-1 shrink self-stretch my-auto basis-0 max-md:max-w-full"
+              style={{ color: !selectedService ? "#c3cbd2" : "unset" }}
+            >
               {selectedService || "Select Service"}
             </div>
             {arrowDown}

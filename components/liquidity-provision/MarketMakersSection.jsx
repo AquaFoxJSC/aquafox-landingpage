@@ -25,11 +25,12 @@ export default function MarketMakersSection() {
       <div className="flex lg:flex-row flex-col flex-wrap gap-10 justify-center items-center max-w-full w-[1000px]">
         <div className="flex flex-colpx-10 min-w-[240px] w-[474px] max-md:px-5 max-md:max-w-full">
           <Image
-            src={"/images/expertise/expertise1.png"}
+            src={"/images/landingpage/market-maker3.png"}
             alt="Market makers illustration"
             width={395}
             height={344}
-            className="object-contain z-10 w-full"
+            className="object-contain z-10"
+            quality={100}
           />
         </div>
         <div className="flex flex-col flex-1 shrink my-auto font-medium basis-[78px] min-w-[240px] max-md:max-w-full">

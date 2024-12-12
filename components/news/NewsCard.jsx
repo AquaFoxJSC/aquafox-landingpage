@@ -3,6 +3,7 @@ import dayjs from "dayjs";
 import { DAYJS_FORMAT_DATE_VN } from "@/constant/constants";
 import { arrowActionIcon } from "@/constant/svg";
 import Image from "next/image";
+import Link from "next/link";
 
 export function NewsCard({ item }) {
   const { slug, title, short_description, created_at, thumbnail } = item;
@@ -21,10 +22,7 @@ export function NewsCard({ item }) {
         <div className="text-base font-medium tracking-tight text-gray-700">
           {title}
         </div>
-        <div
-          className="mt-2.5 text-sm tracking-tight text-[#666974] line-clamp-3"
-          title={short_description}
-        >
+        <div className="mt-2.5 text-sm tracking-tight text-[#666974] line-clamp-3">
           {short_description}
         </div>
       </div>
@@ -32,13 +30,13 @@ export function NewsCard({ item }) {
         <div className="text-[#666974]">
           {dayjs(created_at).format(DAYJS_FORMAT_DATE_VN)}
         </div>
-        <button
+        <Link href={`/news/${slug}`}
           className="flex gap-1 items-center font-semibold text-[#2684FF]"
           tabIndex="0"
         >
-          <span>Read more</span>
-          {arrowActionIcon}
-        </button>
+            <span>Read more</span>
+            {arrowActionIcon}
+        </Link>
       </div>
     </div>
   );

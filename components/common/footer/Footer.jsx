@@ -37,8 +37,7 @@ function Footer() {
 
   const navItems = [
     { text: "Home", href: "/" },
-    { text: "Services", href: "/" },
-    { text: "Careers", href: "/" },
+    { text: "Contact", href: "/contact" },
     { text: "News", href: "/news" },
   ];
 
@@ -79,7 +78,7 @@ function Footer() {
   );
 
   const linkedin = (
-    <Link href="/" target="_blank" rel="noopener noreferrer">
+    <Link href="https://www.linkedin.com/company/aquafoxjsc/" target="_blank" rel="noopener noreferrer">
       {linkedinIcon}
     </Link>
   );
@@ -110,14 +109,8 @@ function Footer() {
           </div>
         </>
       )} */}
-      <div className="flex flex-wrap gap-10 justify-between lg:px-24 px-6 py-16 bg-[#2D5486] max-md:px-5">
+      <div className="flex flex-wrap gap-10 justify-between lg:px-24 px-6 py-[40px] lg:py-16 bg-[#2D5486] max-md:px-5">
         <div className="flex flex-col my-auto">
-          {/* <img
-            loading="lazy"
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/8f3a1330c050570ea1dbcb1430323ee2e2cad8c258ebb714e52698b7f11bce1c?placeholderIfAbsent=true&apiKey=5f3d3068f7634759bee728f966e36875"
-            alt="Company logo"
-            className="object-contain max-w-full aspect-[4.93] w-[177px]"
-          /> */}
           {aquafoxFooter}
           <div className="flex gap-5 items-center mt-8 text-white">
             <div className="flex gap-2.5 items-center self-stretch p-2.5 my-auto w-10 h-10 rounded-3xl bg-blue-400 bg-opacity-20">
