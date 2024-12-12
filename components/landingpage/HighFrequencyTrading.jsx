@@ -12,7 +12,7 @@ export default function HighFrequencyTrading() {
       <div className="flex gap-8 justify-center items-start mt-2.5 max-w-full">
         <div className="flex flex-col justify-center px-8 py-6 max-md:px-5">
           <Image
-            src="/images/landingpage/high-frequency-trading5.png"
+            src="/images/landingpage/high-frequency-trading6.png"
             alt="high-frequency-trading"
             className="object-contain"
             width={256}

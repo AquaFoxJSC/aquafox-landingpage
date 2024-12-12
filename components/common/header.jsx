@@ -99,7 +99,6 @@ function Header() {
           </NavbarItem>
           <DropdownMenu className="bg-white shadow-lg rounded">
             <DropdownItem
-              key="autoscaling"
               className="hover:bg-gray-100 rounded-md text-sm"
               // startContent={icons.scale}
             >
@@ -114,7 +113,6 @@ function Header() {
               </Link>
             </DropdownItem>
             <DropdownItem
-              key="autoscaling"
               className="hover:bg-gray-100 rounded-md text-sm"
               // startContent={icons.scale}
             >

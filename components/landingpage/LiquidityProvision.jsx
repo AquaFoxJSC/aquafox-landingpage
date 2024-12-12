@@ -213,15 +213,15 @@ const LiquidityProvision = () => {
                 <div className="absolute bottom-[-20px] flex overflow-hiddenflex-1 shrink self-stretch my-auto basis-0 w-full max-md:max-w-full">
                   <div className="flex gap-5 justify-between mt-3 lg:text-base text-sm whitespace-nowrap max-md:max-w-full w-full">
                     <div
-                      className={`gap-2.5 self-stretch py-1.5 pr-2.5 pl-2.5 text-blue-50 ${
-                        activeItem === 2 ? "bg-[#9EB6DD]" : "bg-[#2684FF]"
+                      className={`gap-2.5 self-stretch py-1.5 pr-2.5 pl-2.5 ${
+                        activeItem === 2 ? "bg-[#D8EDFF] text-[#9BA5B9]" : "bg-[#E4F3FF] text-[#2684FF]"
                       }  rounded-md min-h-[29px]`}
                     >
                       BEFORE
                     </div>
                     <div
-                      className={`gap-2.5 self-stretch px-4 py-1.5 text-white ${
-                        activeItem === 2 ? "bg-[#2684FF]" : "bg-[#9EB6DD]"
+                      className={`gap-2.5 self-stretch px-4 py-1.5 ${
+                        activeItem === 2 ? "bg-[#E4F3FF] text-[#2684FF]" : "bg-[#D8EDFF] text-[#9BA5B9]"
                       } rounded-md min-h-[29px]`}
                     >
                       AFTER
