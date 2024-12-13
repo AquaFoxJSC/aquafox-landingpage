@@ -83,10 +83,10 @@ function NewsDetailPage(props: NewsDetailPageProps) {
       <div className="news-block">
 
         {data?.title && (
-          <h1 className="text-[40px] mb-2 font-bold">{data?.title}</h1>
+          <h1 className="text-[32px] my-[10px] font-medium">{data?.title}</h1>
         )}
 
-        <div className="name-and-tags flex justify-between gap-5 my-3">
+        <div className="name-and-tags flex justify-between gap-5 mb-[20px]">
           <div className="name-section flex items-center gap-3">
             <div className="information flex flex-col">
               <div className="published-date">
