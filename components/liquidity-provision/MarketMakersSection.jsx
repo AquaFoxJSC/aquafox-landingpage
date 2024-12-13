@@ -1,5 +1,6 @@
 import { arrowDetail } from "@/constant/svg";
 import Image from "next/image";
+import Link from "next/link";
 import * as React from "react";
 const marketMakersContent = {
   title: "What are market makers?",
@@ -47,14 +48,15 @@ export default function MarketMakersSection() {
               way, they help to facilitate trade and ensure that there is always
               someone on the other side of a trade.
             </p>
-            <br/>   
+            <br />
             <p>
               Market makers are important because they help to reduce the
               volatility of prices and provide a source of liquidity to the
               market.
             </p>
           </div>
-          <div
+          <Link
+            href="/news/what-is-market-maker-1729670092214"
             className="flex gap-2 items-center mt-5 w-full justify-end text-base whitespace-nowrap max-md:max-w-full"
             role="button"
             tabIndex={0}
@@ -63,7 +65,7 @@ export default function MarketMakersSection() {
               Detail
             </div>
             {arrowDetail}
-          </div>
+          </Link>
         </div>
       </div>
     </div>

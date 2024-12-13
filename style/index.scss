@@ -15,6 +15,10 @@ nav {
   position: static !important; /* Hoặc không khai báo `position` */
 }
 
+.dd-nav ul{
+  margin-bottom: 0;
+}
+
 
 .dropdown-click {
   --tw-scale-x: 1;

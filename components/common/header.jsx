@@ -97,7 +97,7 @@ function Header() {
               </div>
             </DropdownTrigger>
           </NavbarItem>
-          <DropdownMenu className="bg-white shadow-lg rounded">
+          <DropdownMenu className="bg-white shadow-lg rounded dd-nav">
             <DropdownItem
               className="hover:bg-gray-100 rounded-md text-sm"
               // startContent={icons.scale}

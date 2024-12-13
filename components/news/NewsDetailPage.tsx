@@ -21,7 +21,7 @@ const phone = (
 );
 
 const linkedin = (
-  <Link href="/" target="_blank" rel="noopener noreferrer">
+  <Link href="https://www.linkedin.com/company/aquafoxjsc/" target="_blank" rel="noopener noreferrer">
     {linkedinIcon}
   </Link>
 );

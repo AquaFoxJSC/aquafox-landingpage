@@ -12,7 +12,7 @@ export default function Partners() {
           Partners
         </div>
         <div className="overflow-auto">
-          <div className="lg:block flex items-center w-max pb-[20px]">
+          <div className="lg:block flex gap-[50px] items-center w-max pb-[20px]">
             <div className="flex gap-[50px] items-center justify-center ">
               <Image
                 alt="uniswap"
