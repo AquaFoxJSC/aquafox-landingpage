@@ -5,11 +5,11 @@ import * as React from "react";
 const statsData = [
   {
     number: "100+",
-    description: "Project in portfolio"
+    description: "Projects in portfolio"
   },
   {
-    number: "80%+",
-    description: "Project top 10 trending"
+    number: "80%",
+    description: "Projects top 10 trending"
   },
   {
     number: "100%",
