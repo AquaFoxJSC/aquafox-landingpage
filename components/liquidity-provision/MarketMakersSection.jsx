@@ -26,7 +26,7 @@ export default function MarketMakersSection() {
       <div className="flex lg:flex-row flex-col flex-wrap gap-10 justify-center items-center max-w-full w-[1000px]">
         <div className="flex flex-colpx-10 min-w-[240px] w-[474px] max-md:px-5 max-md:max-w-full">
           <Image
-            src={"/images/landingpage/market-maker3.png"}
+            src={"/images/landingpage/market-maker2.png"}
             alt="Market makers illustration"
             width={395}
             height={344}
