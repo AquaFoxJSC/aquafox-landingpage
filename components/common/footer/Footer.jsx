@@ -139,7 +139,7 @@ function Footer() {
             ))}
           </div>
           <div className="mt-16 text-sm tracking-tight text-[#9EB6DD] max-md:mt-10">
-            Copyright ©{new Date().getFullYear()} Flex AquaFox JSC. All rights
+            Copyright ©{new Date().getFullYear()} AquaFox JSC. All rights
             reserved.
           </div>
         </div>
