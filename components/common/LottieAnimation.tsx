@@ -14,12 +14,12 @@ interface LottieAnimationProps {
 const LottieAnimation = (props: LottieAnimationProps) => {
     const { url, height, width } = props
     return (
-        <div>
+        <div style={{ height: 325, width: 250 }}>
             <Player
                 autoplay
                 loop
                 src={url}
-                style={{ height, width }}
+                style={{ height: 325, width: 250 }}
             ></Player>
         </div>
     );
