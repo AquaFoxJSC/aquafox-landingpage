@@ -129,13 +129,10 @@ function NewsPage(props: NewsPageProps) {
                           DAYJS_FORMAT_DATE_VN
                         )}
                       </div>
-                      <button className="flex gap-2 font-semibold text-[#2684FF] items-center">
-                        <span>
-                          <Link href={`/news/${topNews?.[0]?.slug}`}></Link>Read
-                          more
-                        </span>
+                      <Link href={`/news/${topNews?.[0]?.slug}`} className="flex gap-2 font-semibold text-[#2684FF] items-center">
+                        <span>Read more</span>
                         {arrowActionIcon}
-                      </button>
+                      </Link>
                     </div>
                   </div>
                 </div>
