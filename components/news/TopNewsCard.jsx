@@ -2,11 +2,12 @@ import { DAYJS_FORMAT_DATE_VN } from "@/constant/constants";
 import dayjs from "dayjs";
 import Link from "next/link";
 import * as React from "react";
+import LinkIndicator from "@/components/common/LinkIndicatior";
 
 export default function TopNewsCard({ item }) {
   const { slug, title, short_description, created_at, thumbnail } = item;
   return (
-    <Link href={`/news/${slug}`} className="flex flex-1 gap-5 p-4 bg-white rounded border border-solid border-slate-200 size-full">
+    <LinkIndicator href={`/news/${slug}`} className="flex flex-1 gap-5 p-4 bg-white rounded border border-solid border-slate-200 size-full">
       <img
         loading="lazy"
         src={thumbnail}
@@ -21,6 +22,6 @@ export default function TopNewsCard({ item }) {
           {dayjs(created_at).format(DAYJS_FORMAT_DATE_VN)}
         </div>
       </div>
-    </Link>
+    </LinkIndicator>
   );
 }

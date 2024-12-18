@@ -8,6 +8,7 @@ import {
   Button,
 } from "@nextui-org/react";
 import Image from "next/image";
+import LinkIndicator from "@/components/common/LinkIndicatior";
 
 function Contact() {
   return (
@@ -19,13 +20,13 @@ function Contact() {
             <div className="special-text">Superior Technological Solution</div>
           </div>
           <div className="div-btn-contact">
-            <Link
+            <LinkIndicator
               href="https://t.me/AquaFoxJSC"
               target="_blank"
               rel="noopener noreferrer"
             >
               <button className="btn-contact-us">Contact Us</button>
-            </Link>
+            </LinkIndicator>
           </div>
         </div>
       </div>

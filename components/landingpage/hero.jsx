@@ -9,6 +9,7 @@ import {
 } from "@nextui-org/react";
 import Image from "next/image";
 import { arrowActionIcon, arrowRight } from "@/constant/svg";
+import LinkIndicator from "@/components/common/LinkIndicatior";
 
 function Hero() {
   return (
@@ -26,14 +27,14 @@ function Hero() {
             Experience the ease and delight of cryptocurrency with AquaFox.
           </div>
           <div className="flex justify-center mt-[24px]">
-            <Link
+            <LinkIndicator
               href="/contact"
               className="cursor-pointer flex gap-2 justify-center items-center px-6 py-3.5 mt-2.5 text-base font-semibold tracking-tight text-blue-500 rounded-[10px] border-2 border-blue-500 border-solid min-h-[46px] max-md:px-5"
               tabIndex={0}
             >
               <div className="self-stretch my-auto">Contact Us </div>
               {arrowActionIcon}
-            </Link>
+            </LinkIndicator>
           </div>
         </div>
 

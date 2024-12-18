@@ -2,6 +2,7 @@ import { arrowActionIcon } from "@/constant/svg";
 import Image from "next/image";
 import Link from "next/link";
 import * as React from "react";
+import LinkIndicator from "@/components/common/LinkIndicatior";
 
 export default function HighFrequencyTrading() {
   return (
@@ -21,14 +22,14 @@ export default function HighFrequencyTrading() {
           />
         </div>
       </div>
-      <Link href="/contact"
+      <LinkIndicator href="/contact"
         className="cursor-pointer flex gap-2 justify-center items-center px-6 py-3.5 mt-2.5 text-base font-semibold tracking-tight text-blue-500 rounded-[10px] border-2 border-blue-500 border-solid min-h-[46px] max-md:px-5"
         tabIndex={0}
         aria-label="Get in touch"
       >
         <div className="self-stretch my-auto">Get in touch</div>
         {arrowActionIcon}
-      </Link>
+      </LinkIndicator>
     </div>
   );
 }

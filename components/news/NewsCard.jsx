@@ -4,6 +4,7 @@ import { DAYJS_FORMAT_DATE_VN } from "@/constant/constants";
 import { arrowActionIcon } from "@/constant/svg";
 import Image from "next/image";
 import Link from "next/link";
+import LinkIndicator from "@/components/common/LinkIndicatior";
 
 export function NewsCard({ item }) {
   const { slug, title, short_description, created_at, thumbnail } = item;
@@ -30,13 +31,13 @@ export function NewsCard({ item }) {
         <div className="text-[#666974]">
           {dayjs(created_at).format(DAYJS_FORMAT_DATE_VN)}
         </div>
-        <Link href={`/news/${slug}`}
+        <LinkIndicator href={`/news/${slug}`}
           className="flex gap-1 items-center font-semibold text-[#2684FF]"
           tabIndex="0"
         >
             <span>Read more</span>
             {arrowActionIcon}
-        </Link>
+        </LinkIndicator>
       </div>
     </div>
   );

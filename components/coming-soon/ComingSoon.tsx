@@ -2,6 +2,7 @@ import { arrowActionIcon } from "@/constant/svg";
 import Image from "next/image";
 import Link from "next/link";
 import LottieAnimation from "../common/LottieAnimation";
+import LinkIndicator from "@/components/common/LinkIndicatior";
 
 function ComingSoon() {
   return (
@@ -21,12 +22,12 @@ function ComingSoon() {
           </div>
         </div>
 
-        <Link href="/"
+        <LinkIndicator href="/"
           className="flex gap-2 justify-center items-center self-start px-6 py-3.5 mt-10 text-base font-semibold tracking-tight text-blue-500 rounded-xl border-2 border-blue-500 border-solid min-h-[46px] max-md:px-5"
         >
           <span className="self-stretch my-auto">Go to Homepage</span>
           {arrowActionIcon}
-        </Link>
+        </LinkIndicator>
       </div>
     </div>
   );

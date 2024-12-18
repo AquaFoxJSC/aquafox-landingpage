@@ -10,6 +10,7 @@ import {
   tgIcon,
   xIcon,
 } from "@/constant/svg";
+import LinkIndicator from "@/components/common/LinkIndicatior";
 
 function Footer() {
   const [hideFixed, setHideFixed] = React.useState(false);
@@ -42,45 +43,45 @@ function Footer() {
   ];
 
   const twitter = (
-    <Link
+    <LinkIndicator
       href="https://twitter.com/AquaFoxJsc"
       target="_blank"
       rel="noopener noreferrer"
     >
       {xIcon}
-    </Link>
+    </LinkIndicator>
   );
 
   const mail = (
-    <Link
+    <LinkIndicator
       href="mailto:connect@aquafox.io"
       target="_blank"
       rel="noopener noreferrer"
     >
       {emailIcon}
-    </Link>
+    </LinkIndicator>
   );
 
   const telegram = (
-    <Link
+    <LinkIndicator
       href="https://t.me/AquaFoxJSC"
       target="_blank"
       rel="noopener noreferrer"
     >
       {tgIcon}
-    </Link>
+    </LinkIndicator>
   );
 
   const phone = (
-    <Link href="tel:0856599797" target="_blank" rel="noopener noreferrer">
+    <LinkIndicator href="tel:0856599797" target="_blank" rel="noopener noreferrer">
       {phoneIcon}
-    </Link>
+    </LinkIndicator>
   );
 
   const linkedin = (
-    <Link href="https://www.linkedin.com/company/aquafoxjsc/" target="_blank" rel="noopener noreferrer">
+    <LinkIndicator href="https://www.linkedin.com/company/aquafoxjsc/" target="_blank" rel="noopener noreferrer">
       {linkedinIcon}
-    </Link>
+    </LinkIndicator>
   );
 
   return (

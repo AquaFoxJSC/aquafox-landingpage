@@ -11,6 +11,7 @@ import Image from "next/image";
 import { Button, Drawer, Dropdown, Menu } from "antd";
 import { usePathname } from "next/navigation";
 import { DownOutlined, MenuOutlined } from "@ant-design/icons";
+import LinkIndicator from "@/components/common/LinkIndicatior";
 
 const ChevronDown = ({ fill, size, height, width, ...props }) => {
   return (
@@ -53,7 +54,7 @@ function Header() {
         {
           key: "1",
           label: (
-            <Link
+            <LinkIndicator
               href="/liquidity-provision"
               style={{
                 color:
@@ -61,20 +62,20 @@ function Header() {
               }}
             >
               Liquidity Provision
-            </Link>
+            </LinkIndicator>
           ),
         },
         {
           key: "2",
           label: (
-            <Link
+            <LinkIndicator
               href="/coming-soon"
               style={{
                 color: pathname === "/coming-soon" ? "#2684FF" : "#666666",
               }}
             >
               High-Frequency Trading
-            </Link>
+            </LinkIndicator>
           ),
         },
       ]}
@@ -85,7 +86,7 @@ function Header() {
     <header>
       <Navbar className="py-[4px] bg-white" maxWidth="xl">
         <NavbarBrand>
-          <Link href="/">
+          <LinkIndicator href="/">
             <Image
               src="/images/logo_v4.png"
               alt="Logo"
@@ -95,7 +96,7 @@ function Header() {
               quality={100}
               className="max-md:w-[163.5px]"
             />
-          </Link>
+          </LinkIndicator>
         </NavbarBrand>
         <NavbarContent
           className="hidden sm:flex"
@@ -103,14 +104,14 @@ function Header() {
           justify="center"
         >
           <NavbarItem>
-            <Link
+            <LinkIndicator
               href="/"
               style={{
                 color: pathname === "/" ? "#2684FF" : "#666666",
               }}
             >
               Home
-            </Link>
+            </LinkIndicator>
           </NavbarItem>
           <NavbarItem>
             <Dropdown overlay={menuItems} trigger={["hover"]} align={{ offset: [-60, 0] }}>
@@ -127,14 +128,14 @@ function Header() {
             </Dropdown>
           </NavbarItem>
           <NavbarItem>
-            <Link
+            <LinkIndicator
               href="/news"
               style={{
                 color: pathname === "/news" ? "#2684FF" : "#666666",
               }}
             >
               News
-            </Link>
+            </LinkIndicator>
           </NavbarItem>
         </NavbarContent>
         <NavbarContent
@@ -143,9 +144,9 @@ function Header() {
           style={{ marginBottom: 0 }}
         >
           <NavbarItem>
-            <Link href="/contact">
+            <LinkIndicator href="/contact">
               <button className="btn-contact-us">Get in touch</button>
-            </Link>
+            </LinkIndicator>
           </NavbarItem>
         </NavbarContent>
         <button
@@ -165,28 +166,28 @@ function Header() {
         >
           <div className="flex flex-col gap-6 items-center">
             <NavbarItem>
-              <Link color="foreground" href="/" onClick={() => setOpen(false)}>
+              <LinkIndicator color="foreground" href="/" onClick={() => setOpen(false)}>
                 Home
-              </Link>
+              </LinkIndicator>
             </NavbarItem>
             <NavbarItem>
-              <Link
+              <LinkIndicator
                 href="/liquidity-provision"
                 aria-current="page"
                 onClick={() => setOpen(false)}
               >
                 Liquidity Provision
-              </Link>
+              </LinkIndicator>
             </NavbarItem>
             <NavbarItem>
-              <Link color="foreground" href="/news">
+              <LinkIndicator color="foreground" href="/news">
                 News
-              </Link>
+              </LinkIndicator>
             </NavbarItem>
             <NavbarItem>
-              <Link href="/contact">
+              <LinkIndicator href="/contact">
                 <button className="btn-contact-us">Get in touch</button>
-              </Link>
+              </LinkIndicator>
             </NavbarItem>
           </div>
         </Drawer>

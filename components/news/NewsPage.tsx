@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import useWindowWidth from "@/hooks/useInnerWidth";
-import Link from "next/link";
+import LinkIndicator from "@/components/common/LinkIndicatior";
 import dayjs from "dayjs";
 import NewsListGrid from "@/components/news/NewsListGrid";
 import { Dropdown, Menu, Pagination } from "antd";
@@ -81,12 +81,12 @@ function NewsPage(props: NewsPageProps) {
         <div className="flex flex-col pt-[20px]">
           <div className="flex flex-col w-full font-medium max-md:max-w-full">
             <div className="flex gap-2 items-center self-start text-base tracking-tight whitespace-nowrap">
-              <Link href="/" className="self-stretch my-auto text-stone-500">Home</Link>
+              <LinkIndicator href="/" className="self-stretch my-auto text-stone-500">Home</LinkIndicator>
               {breadcrumbIcon}
               {
                 tag ?
                   <>
-                    <Link href="/news" className="self-stretch my-auto text-stone-500">News</Link>
+                    <LinkIndicator href="/news" className="self-stretch my-auto text-stone-500">News</LinkIndicator>
                     {breadcrumbIcon}
                     <div className="self-stretch my-auto text-blue-500">Tag: {tag}</div>
                   </>
@@ -129,10 +129,10 @@ function NewsPage(props: NewsPageProps) {
                           DAYJS_FORMAT_DATE_VN
                         )}
                       </div>
-                      <Link href={`/news/${topNews?.[0]?.slug}`} className="flex gap-2 font-semibold text-[#2684FF] items-center">
+                      <LinkIndicator href={`/news/${topNews?.[0]?.slug}`} className="flex gap-2 font-semibold text-[#2684FF] items-center">
                         <span>Read more</span>
                         {arrowActionIcon}
-                      </Link>
+                      </LinkIndicator>
                     </div>
                   </div>
                 </div>

@@ -2,6 +2,7 @@ import * as React from "react";
 import { NewsCard } from "./NewsCard";
 import { arrowActionIcon } from "@/constant/svg";
 import Link from "next/link";
+import LinkIndicator from "@/components/common/LinkIndicatior";
 
 
 export default function NewsSection({newsList}) {
@@ -12,10 +13,10 @@ export default function NewsSection({newsList}) {
           <div className="self-stretch my-auto text-4xl font-medium tracking-tighter leading-loose text-center text-[#0836A1]">
             News
           </div>
-          <Link href="/news" className="flex gap-2 justify-center items-center self-stretch px-6 py-3.5 my-auto text-base font-semibold tracking-tight text-blue-500 rounded-[10px] border-2 border-blue-500 border-solid min-h-[46px] max-md:px-5" tabIndex="0">
+          <LinkIndicator href="/news" className="flex gap-2 justify-center items-center self-stretch px-6 py-3.5 my-auto text-base font-semibold tracking-tight text-blue-500 rounded-[10px] border-2 border-blue-500 border-solid min-h-[46px] max-md:px-5" tabIndex="0">
             <span className="self-stretch my-auto">See All News</span>
             {arrowActionIcon}
-          </Link>
+          </LinkIndicator>
         </div>
         <div className="flex lg:flex-wrap flex-nowrap overflow-auto gap-8 items-start mt-8 w-full">
           {newsList.map((article) => (

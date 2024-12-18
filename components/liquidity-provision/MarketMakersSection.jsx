@@ -2,6 +2,8 @@ import { arrowDetail } from "@/constant/svg";
 import Image from "next/image";
 import Link from "next/link";
 import * as React from "react";
+import LinkIndicator from "@/components/common/LinkIndicatior";
+
 const marketMakersContent = {
   title: "What are market makers?",
   description: `Market makers are firms or individuals that provide liquidity to the
@@ -55,7 +57,7 @@ export default function MarketMakersSection() {
               market.
             </p>
           </div>
-          <Link
+          <LinkIndicator
             href="/news/what-is-market-maker-1729670092214"
             className="flex gap-2 items-center mt-5 w-full justify-end text-base whitespace-nowrap max-md:max-w-full"
             role="button"
@@ -65,7 +67,7 @@ export default function MarketMakersSection() {
               Detail
             </div>
             {arrowDetail}
-          </Link>
+          </LinkIndicator>
         </div>
       </div>
     </div>

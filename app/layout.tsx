@@ -6,6 +6,8 @@ import "../style/index.scss";
 
 import Header from "../components/common/header";
 import Footer from "../components/common/footer/Footer";
+
+import LoadingIndicator from "../components/common/LoadingIndicator";
 import Head from "next/head";
 
 export const metadata: Metadata = {
@@ -47,6 +49,7 @@ export default function RootLayout({
           }}
         />
       </Head>
+      <LoadingIndicator />
       <body className={`flex flex-col min-h-screen`}>
         <Header />
         <div className="content">{children}</div>

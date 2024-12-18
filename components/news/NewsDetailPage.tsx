@@ -3,37 +3,38 @@ import Link from "next/link";
 import dayjs from "dayjs";
 import { DAYJS_FORMAT_DATE } from "@/constant/constants";
 import { breadcrumbIcon, linkedinIcon, phoneIcon, tgIcon, xIcon } from "@/constant/svg";
+import LinkIndicator from "@/components/common/LinkIndicatior";
 
 const telegram = (
-  <Link
+  <LinkIndicator
     href="https://t.me/AquaFoxJSC"
     target="_blank"
     rel="noopener noreferrer"
   >
     {tgIcon}
-  </Link>
+  </LinkIndicator>
 );
 
 const phone = (
-  <Link href="tel:0856599797" target="_blank" rel="noopener noreferrer">
+  <LinkIndicator href="tel:0856599797" target="_blank" rel="noopener noreferrer">
     {phoneIcon}
-  </Link>
+  </LinkIndicator>
 );
 
 const linkedin = (
-  <Link href="https://www.linkedin.com/company/aquafoxjsc/" target="_blank" rel="noopener noreferrer">
+  <LinkIndicator href="https://www.linkedin.com/company/aquafoxjsc/" target="_blank" rel="noopener noreferrer">
     {linkedinIcon}
-  </Link>
+  </LinkIndicator>
 );
 
 const twitter = (
-  <Link
+  <LinkIndicator
     href="https://twitter.com/AquaFoxJsc"
     target="_blank"
     rel="noopener noreferrer"
   >
     {xIcon}
-  </Link>
+  </LinkIndicator>
 );
 
 
@@ -73,9 +74,9 @@ function NewsDetailPage(props: NewsDetailPageProps) {
     <div className="max-w-[1280px] mx-auto px-6 pb-[150px]">
       {/* <BreadcrumbComponent items={newsBreadcrumbs} /> */}
       <div className="flex gap-2 items-center self-start text-base tracking-tight whitespace-nowrap">
-        <Link href="/" className="self-stretch my-auto text-stone-500">Home</Link>
+        <LinkIndicator href="/" className="self-stretch my-auto text-stone-500">Home</LinkIndicator>
         {breadcrumbIcon}
-        <Link href="/news" className="self-stretch my-auto text-stone-500">News</Link>
+        <LinkIndicator href="/news" className="self-stretch my-auto text-stone-500">News</LinkIndicator>
         {breadcrumbIcon}
         <div className="self-stretch my-auto text-blue-500">{data?.title}</div>
       </div>
@@ -125,9 +126,9 @@ function NewsDetailPage(props: NewsDetailPageProps) {
       <div className="flex flex-wrap gap-10 justify-between items-center pt-9">
         <div className="flex flex-wrap gap-2.5 items-start self-stretch my-auto text-base font-medium tracking-tight text-[#2684FF] min-w-[240px]">
           {data?.tags.map((tag, index) => (
-            <Link href={`/news?tag=${tag.replaceAll(" ", "-")}`} key={tag} className="gap-2.5 self-stretch px-2.5 py-1.5 whitespace-nowrap bg-[#E9F5FF] rounded-3xl">
+            <LinkIndicator href={`/news?tag=${tag.replaceAll(" ", "-")}`} key={tag} className="gap-2.5 self-stretch px-2.5 py-1.5 whitespace-nowrap bg-[#E9F5FF] rounded-3xl">
               {tag}
-            </Link>
+            </LinkIndicator>
           ))}
         </div>
         <div className="flex gap-5 items-center self-stretch my-auto text-white">

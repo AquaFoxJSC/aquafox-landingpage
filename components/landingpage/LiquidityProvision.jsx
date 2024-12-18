@@ -5,6 +5,7 @@ import { arrowActionIcon, commitmentIcon, effectiveIcon, starIcon } from "@/cons
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState, useEffect, useRef } from "react";
+import LinkIndicator from "@/components/common/LinkIndicatior";
 
 const liquiditySteps = [
   {
@@ -236,14 +237,14 @@ const LiquidityProvision = () => {
               className={`lg:mt-[60px] mt-2 flex justify-center`}
               style={{ visibility: activeItem === 2 ? "visible" : "hidden" }}
             >
-              <Link href="/liquidity-provision"
+              <LinkIndicator href="/liquidity-provision"
                 className="cursor-pointer flex gap-2 justify-center items-center px-6 py-3.5 mt-2.5 text-base font-semibold tracking-tight text-blue-500 rounded-[10px] border-2 border-blue-500 border-solid min-h-[46px] max-md:px-5"
                 tabIndex={0}
                 aria-label="Learn more"
               >
                 <div className="self-stretch my-auto">Learn more</div>
                 {arrowActionIcon}
-              </Link>
+              </LinkIndicator>
             </div>
           </div>
         </div>

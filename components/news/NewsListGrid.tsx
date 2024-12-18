@@ -3,6 +3,7 @@ import Image from "next/image";
 import dayjs from "dayjs";
 import Link from "next/link";
 import { DAYJS_FORMAT_DATE_VN } from "@/constant/constants";
+import LinkIndicator from "@/components/common/LinkIndicatior";
 
 interface NewsListGridProps {
   data: any[];
@@ -18,7 +19,7 @@ function NewsListGrid(props: NewsListGridProps) {
       {data?.length ? (
         <div className="blog-list-grid grid lg:grid-cols-3 grid-cols-1 gap-7">
           {(data || []).map((item: any) => (
-            <Link
+            <LinkIndicator
               href={`/news/${item?.slug}`}
               className="blog-item"
               key={item.id}
@@ -45,7 +46,7 @@ function NewsListGrid(props: NewsListGridProps) {
                   {item.short_description}
                 </div>
               </div>
-            </Link>
+            </LinkIndicator>
           ))}
         </div>
       ) : (
