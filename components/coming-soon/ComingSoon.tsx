@@ -1,15 +1,15 @@
 import { arrowActionIcon } from "@/constant/svg";
 import Image from "next/image";
 import Link from "next/link";
+import LottieAnimation from "../common/LottieAnimation";
 
 function ComingSoon() {
   return (
-    <div className="flex flex-wrap gap-10 justify-center items-center lg:pt-44 max-md:py-12">
-      <Image
-        src="/images/coming-soon.png"
-        height={359}
-        width={300}
-        alt="Coming Soon Illustration"
+    <div className="flex flex-wrap gap-10 justify-center items-center">
+      <LottieAnimation
+        url="/images/rocket2.json"
+        height={550}
+        width={400}
       />
       <div className="flex flex-col self-stretch my-auto min-w-[240px]">
         <div className="flex flex-col">
