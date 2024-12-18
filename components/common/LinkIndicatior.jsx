@@ -7,9 +7,9 @@ import { show, hide } from "./topbar";
 const LinkIndicator = ({
   href,
   children,
-  target = "_self",
-  rel = "",
-  className = "",
+  target = '',
+  rel = '',
+  className = '',
   style = null,
 }) => {
   return (

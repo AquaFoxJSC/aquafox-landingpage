@@ -1,12 +1,11 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useEffect } from "react";
+import { useEffect, Suspense } from "react";
 import { hide, show } from "./topbar";
 import { usePathname, useSearchParams } from "next/navigation";
 
 const LoadingIndicator = () => {
-
   const handleStart = (url) => {
     show();
   };
@@ -20,13 +19,18 @@ const LoadingIndicator = () => {
 
   useEffect(() => {
     handleComplete();
-
-    return () => {
-      handleStart();
-    };
   }, [pathname, searchParams]);
 
   return <></>;
 };
 
-export default LoadingIndicator;
+// Wrapper để bao quanh component
+const SuspenseWrapper = () => {
+  return (
+    <Suspense fallback={<div></div>}>
+      <LoadingIndicator />
+    </Suspense>
+  );
+};
+
+export default SuspenseWrapper;
