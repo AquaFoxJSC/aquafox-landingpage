@@ -78,7 +78,7 @@ function NewsPage(props: NewsPageProps) {
   return (
     <div className="w-full">
       <div className="max-w-[1280px] mx-auto px-6 pb-[150px]">
-        <div className="flex flex-col">
+        <div className="flex flex-col pt-[20px]">
           <div className="flex flex-col w-full font-medium max-md:max-w-full">
             <div className="flex gap-2 items-center self-start text-base tracking-tight whitespace-nowrap">
               <Link href="/" className="self-stretch my-auto text-stone-500">Home</Link>
@@ -101,7 +101,7 @@ function NewsPage(props: NewsPageProps) {
               <div className="flex-1 shrink mt-2.5 w-full text-3xl tracking-tighter text-gray-700 max-md:max-w-full">
                 Aquafox News
               </div>
-              <div className="flex flex-wrap gap-8 mt-8 w-full max-md:max-w-full">
+              <div className="flex flex-wrap gap-8 mt-[20px] w-full max-md:max-w-full">
                 <div className="flex flex-col self-start p-5 bg-white rounded-lg border border-solid border-slate-200 min-w-[240px] xl:w-[790px] max-md:max-w-full">
                   <div className="flex overflow-hidden flex-col max-w-full rounded-lg bg-neutral-100 xl:w-[748px]">
                     <Image

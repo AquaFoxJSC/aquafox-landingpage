@@ -1,15 +1,12 @@
 /* eslint-disable @next/next/next-script-for-ga */
 /* eslint-disable @next/next/no-page-custom-font */
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import "../style/index.scss";
 
 import Header from "../components/common/header";
 import Footer from "../components/common/footer/Footer";
 import Head from "next/head";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "AquaFox",
@@ -50,7 +47,7 @@ export default function RootLayout({
           }}
         />
       </Head>
-      <body className={`${inter.className} flex flex-col min-h-screen`}>
+      <body className={`flex flex-col min-h-screen`}>
         <Header />
         <div className="content">{children}</div>
         <Footer />

@@ -125,7 +125,6 @@ nav {
   justify-content: center;
   align-items: center;
   color: var(--Curious-Blue-50, #f0f9ff);
-  // font-family: Inter;
   font-size: 13px;
   font-style: normal;
   font-weight: 500;
@@ -531,7 +530,6 @@ nav {
             .client-name {
               color: #101828;
               /* Text base - 16px/Semibold */
-              // font-family: Inter;
               font-size: 16px;
               font-style: normal;
               font-weight: 600;
@@ -545,7 +543,6 @@ nav {
               color: #475467;
               text-overflow: ellipsis;
               /* Text sm - 14px/Regular */
-              // font-family: Inter;
               font-size: 14px;
               font-style: normal;
               font-weight: 400;
@@ -1065,4 +1062,9 @@ nav {
 
 .ant-form-item-label {
   display: none !important;
+}
+
+
+.ant-dropdown-menu-title-content >a {
+  outline: none !important;
 }
