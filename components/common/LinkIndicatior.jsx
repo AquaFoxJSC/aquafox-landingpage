@@ -12,10 +12,15 @@ const LinkIndicator = ({
   className = '',
   style = null,
 }) => {
+  const handleShow = () => {
+    if (!target) {
+      show()
+    }
+  }
   return (
     <Link
       href={href}
-      onClick={show}
+      onClick={handleShow}
       target={target}
       rel={rel}
       className={className}
