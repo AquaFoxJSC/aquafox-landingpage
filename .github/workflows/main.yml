@@ -1,0 +1,46 @@
+name: Build and Push to ECR
+
+on:
+  push:
+    tags:
+      - "v*"
+    branches:
+      - main
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  build-and-push:
+    runs-on: common
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Login to Amazon ECR
+        id: login-ecr
+        run: aws ecr get-login-password --region ap-southeast-1 | docker login --username AWS --password-stdin 390403898608.dkr.ecr.ap-southeast-1.amazonaws.com
+      - name: Determine build type
+        id: determine-build
+        run: |
+          if [[ "${GITHUB_REF}" == refs/tags/* ]]; then
+            TAG_NAME=${GITHUB_REF#refs/tags/}
+            IMAGE_TAG=$TAG_NAME
+          else
+            IMAGE_TAG=stg-${GITHUB_SHA:0:7}
+          fi
+          echo "IMAGE_TAG=$IMAGE_TAG" >> $GITHUB_ENV
+      - name: Build and tag Docker image
+        run: |
+          IMAGE_URI="390403898608.dkr.ecr.ap-southeast-1.amazonaws.com/aquafox-registry/aquafox-landingpage:${{ env.IMAGE_TAG }}"
+          docker build -t "$IMAGE_URI" -f dockerfile .
+          echo "IMAGE_URI=$IMAGE_URI" >> $GITHUB_ENV
+
+      - name: Push Docker image to Amazon ECR
+        run: |
+          docker push "$IMAGE_URI"
+
+      - name: Output image URI
+        run: echo "$IMAGE_URI"
