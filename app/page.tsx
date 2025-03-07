@@ -11,6 +11,26 @@ import Partners from "../components/landingpage/Partners";
 import NewsSection from "../components/news/NewsSection";
 import newsApis from "@/apis/newsApis";
 import 'antd/dist/reset.css';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'AquaFox',
+  description: 'AquaFox - Your trusted partner in liquidity provision and high frequency trading',
+  openGraph: {
+    title: 'AquaFox',
+    description: 'AquaFox - Your trusted partner in liquidity provision and high frequency trading',
+    locale: 'en_US',
+    siteName: 'aquafox.io',
+    url: 'https://aquafox.io',
+    type: 'website'
+  },
+  twitter: {
+    card: 'summary',
+    title: 'AquaFox',
+    description: 'AquaFox - Your trusted partner in liquidity provision and high frequency trading',
+    site: '@Aquafoxjsc'
+  }
+};
 
 export default async function Home() {
   const apiRs = await newsApis.getAllNews({

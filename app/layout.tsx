@@ -11,8 +11,30 @@ import LoadingIndicator from "../components/common/LoadingIndicator";
 import Head from "next/head";
 
 export const metadata: Metadata = {
-  title: "AquaFox",
+  title: {
+    default: "AquaFox",
+    template: "%s | AquaFox",
+  },
   description: "AquaFox Landing Page",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    siteName: "aquafox.io",
+    url: "https://aquafox.io",
+  },
+  twitter: {
+    card: "summary",
+    site: "@Aquafoxjsc",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+  metadataBase: new URL("https://aquafox.io"),
 };
 
 export default function RootLayout({
@@ -23,7 +45,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Head>
-        <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="121x134" />
+        <link
+          rel="icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+          sizes="121x134"
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
@@ -48,6 +75,9 @@ export default function RootLayout({
           `,
           }}
         />
+        <meta name="googlebot" content="index, follow" />
+        <meta name="robots" content="index, follow" />
+        <meta name="bingbot" content="index, follow" />
       </Head>
       <LoadingIndicator />
       <body className={`flex flex-col min-h-screen`}>
