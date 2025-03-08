@@ -95,7 +95,7 @@ function NewsDetailPage(props: NewsDetailPageProps) {
   return (
     <div className="max-w-[1280px] mx-auto px-6 pb-[150px]">
       {/* <BreadcrumbComponent items={newsBreadcrumbs} /> */}
-      <div className="flex gap-2 items-center self-start text-base tracking-tight whitespace-nowrap">
+      <div className="flex gap-2 items-center self-start text-base tracking-tight whitespace-nowrap flex-wrap">
         <LinkIndicator href="/" className="self-stretch my-auto text-stone-500">
           Home
         </LinkIndicator>
@@ -107,7 +107,7 @@ function NewsDetailPage(props: NewsDetailPageProps) {
           News
         </LinkIndicator>
         {breadcrumbIcon}
-        <div className="self-stretch my-auto text-blue-500">{data?.title}</div>
+        <div className="self-stretch my-auto text-blue-500 whitespace-pre-wrap">{data?.title}</div>
       </div>
 
       <div className="news-block">
