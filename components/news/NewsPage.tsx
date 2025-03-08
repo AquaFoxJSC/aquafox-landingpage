@@ -80,7 +80,7 @@ function NewsPage(props: NewsPageProps) {
       <div className="max-w-[1280px] mx-auto px-6 pb-[150px]">
         <div className="flex flex-col pt-[20px]">
           <div className="flex flex-col w-full font-medium max-md:max-w-full">
-            <div className="flex gap-2 items-center self-start text-base tracking-tight whitespace-nowrap">
+            <div className="flex gap-2 items-center self-start text-base tracking-tight whitespace-nowrap flex-wrap">
               <LinkIndicator href="/" className="self-stretch my-auto text-stone-500">Home</LinkIndicator>
               {breadcrumbIcon}
               {
@@ -88,7 +88,7 @@ function NewsPage(props: NewsPageProps) {
                   <>
                     <LinkIndicator href="/news" className="self-stretch my-auto text-stone-500">News</LinkIndicator>
                     {breadcrumbIcon}
-                    <div className="self-stretch my-auto text-blue-500">Tag: {tag}</div>
+                    <div className="self-stretch my-auto text-blue-500 whitespace-pre-wrap">Tag: {tag}</div>
                   </>
                   :
                   <div className="self-stretch my-auto text-blue-500">News</div>
