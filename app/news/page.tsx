@@ -6,12 +6,17 @@ import { PAGESIZE_NEWS } from '@/constant/constants';
 
 async function Home({ params, searchParams }: any) {
     try {
-        const isSortAsc = searchParams?.sort === "asc"
+        let isSortAsc = searchParams?.sort === "asc"
+        if (!searchParams?.sort) {
+            isSortAsc = false
+        }
         const tag = searchParams?.tag ? searchParams?.tag.replaceAll("-", " ") : null
         const topNewsRs = await newsApis.getAllNews({
             page: 1,
             limit: 6,
-            is_hot: true
+            is_hot: true,
+            order_by: "created_at",
+            sort_by: 'desc',
         });
         const apiRs = await newsApis.getAllNews({
             page: searchParams?.page || 1,
