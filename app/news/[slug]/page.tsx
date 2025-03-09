@@ -19,9 +19,9 @@ async function fetchNewsData(slug: string) {
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-  const data = await fetchNewsData(params.slug);
+  const data = await fetchNewsData((await params).slug);
   if (!data) {
     return {
       title: "News Not Found",
