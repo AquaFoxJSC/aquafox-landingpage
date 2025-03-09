@@ -12,8 +12,30 @@ import Head from "next/head";
 import { GoogleAnalytics } from '@next/third-parties/google'
 
 export const metadata: Metadata = {
-  title: "AquaFox",
+  title: {
+    default: "AquaFox",
+    template: "%s | AquaFox",
+  },
   description: "AquaFox Landing Page",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    siteName: "aquafox.io",
+    url: "https://aquafox.io",
+  },
+  twitter: {
+    card: "summary",
+    site: "@Aquafoxjsc",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+  metadataBase: new URL("https://aquafox.io"),
 };
 
 export default function RootLayout({
@@ -24,7 +46,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Head>
-        <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="121x134" />
+        <link
+          rel="icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+          sizes="121x134"
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
@@ -35,7 +62,6 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
           rel="stylesheet"
         />
-
       </Head>
       <LoadingIndicator />
       <body className={`flex flex-col min-h-screen`}>
