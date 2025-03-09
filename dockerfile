@@ -1,12 +1,12 @@
 # Install dependencies only when needed
-FROM node:20.9.0 AS deps
+FROM node:20.9.0-alpine AS deps
 RUN apk add --no-cache libc6-compat
 WORKDIR /build
 COPY package.json package-lock.json ./
 RUN npm install --production
 
 # Rebuild the source code only when needed
-FROM node:20.9.0 AS builder
+FROM node:20.9.0-alpine AS builder
 WORKDIR /build
 COPY package.json package-lock.json ./
 RUN npm install
@@ -14,7 +14,7 @@ COPY . .
 RUN npm run build
 
 # Production image, copy all the files and run next
-FROM node:20.9.0 AS runner
+FROM node:20.9.0-alpine AS runner
 WORKDIR /build
 USER node
 COPY --chown=node:node --from=builder /build/app ./app
