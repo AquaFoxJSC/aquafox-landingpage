@@ -9,6 +9,7 @@ import Footer from "../components/common/footer/Footer";
 
 import LoadingIndicator from "../components/common/LoadingIndicator";
 import Head from "next/head";
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 export const metadata: Metadata = {
   title: {
@@ -61,23 +62,6 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
           rel="stylesheet"
         />
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-85TRWFJN3C"
-        ></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-85TRWFJN3C');
-          `,
-          }}
-        />
-        <meta name="googlebot" content="index, follow" />
-        <meta name="robots" content="index, follow" />
-        <meta name="bingbot" content="index, follow" />
       </Head>
       <LoadingIndicator />
       <body className={`flex flex-col min-h-screen`}>
@@ -85,6 +69,8 @@ export default function RootLayout({
         <div className="content">{children}</div>
         <Footer />
       </body>
+      <GoogleAnalytics gaId="G-85TRWFJN3C" />
+
     </html>
   );
 }
