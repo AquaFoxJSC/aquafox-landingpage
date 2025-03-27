@@ -102,7 +102,7 @@ function NewsPage(props: NewsPageProps) {
                 Aquafox News
               </div>
               <div className="flex flex-wrap gap-8 mt-[20px] w-full max-md:max-w-full">
-                <div className="flex flex-col self-start p-5 bg-white rounded-lg border border-solid border-slate-200 min-w-[240px] xl:w-[790px] max-md:max-w-full">
+                <LinkIndicator href={`/news/${topNews?.[0]?.slug}`} className="flex flex-col self-start p-5 bg-white rounded-lg border border-solid border-slate-200 min-w-[240px] xl:w-[790px] max-md:max-w-full hover:shadow-lg transition-shadow">
                   <div className="flex overflow-hidden flex-col max-w-full rounded-lg bg-neutral-100 xl:w-[748px]">
                     <Image
                       src={topNews?.[0]?.thumbnail}
@@ -112,7 +112,6 @@ function NewsPage(props: NewsPageProps) {
                       quality={100}
                       className="object-cover lg:w-full lg:h-[421px] h-[220px]"
                     />
-
                   </div>
                   <div className="flex flex-col mt-5 w-full max-md:max-w-full">
                     <div className="flex flex-col w-full max-md:max-w-full">
@@ -129,13 +128,13 @@ function NewsPage(props: NewsPageProps) {
                           DAYJS_FORMAT_DATE_VN
                         )}
                       </div>
-                      <LinkIndicator href={`/news/${topNews?.[0]?.slug}`} className="flex gap-2 font-semibold text-[#2684FF] items-center">
+                      <div className="flex gap-2 font-semibold text-[#2684FF] items-center">
                         <span>Read more</span>
                         {arrowActionIcon}
-                      </LinkIndicator>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </LinkIndicator>
                 <div className="flex flex-col flex-1 shrink basis-10 min-w-[240px]">
                   <div className="text-xl font-semibold tracking-tight text-gray-700">
                     Top News

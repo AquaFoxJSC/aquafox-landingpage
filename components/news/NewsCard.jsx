@@ -9,7 +9,7 @@ import LinkIndicator from "@/components/common/LinkIndicatior";
 export function NewsCard({ item }) {
   const { slug, title, short_description, created_at, thumbnail } = item;
   return (
-    <div className="flex flex-col flex-grow p-5 bg-white rounded border border-solid border-slate-200 basis-[calc(33.33%-22px)] lg:max-w-[calc(33.33%-22px)] min-w-[300px]">
+    <LinkIndicator href={`/news/${slug}`} className="flex flex-col flex-grow p-5 bg-white rounded border border-solid border-slate-200 basis-[calc(33.33%-22px)] lg:max-w-[calc(33.33%-22px)] min-w-[300px] hover:shadow-lg transition-shadow">
       <div className="flex overflow-hidden flex-col w-full rounded bg-neutral-100">
         <Image
           src={thumbnail}
@@ -31,14 +31,11 @@ export function NewsCard({ item }) {
         <div className="text-[#666974]">
           {dayjs(created_at).format(DAYJS_FORMAT_DATE_VN)}
         </div>
-        <LinkIndicator href={`/news/${slug}`}
-          className="flex gap-1 items-center font-semibold text-[#2684FF]"
-          tabIndex="0"
-        >
-            <span>Read more</span>
-            {arrowActionIcon}
-        </LinkIndicator>
+        <div className="flex gap-1 items-center font-semibold text-[#2684FF]">
+          <span>Read more</span>
+          {arrowActionIcon}
+        </div>
       </div>
-    </div>
+    </LinkIndicator>
   );
 }
