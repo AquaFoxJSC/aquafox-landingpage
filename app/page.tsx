@@ -10,32 +10,38 @@ import StatsSection from "../components/landingpage/StatsSection";
 import Partners from "../components/landingpage/Partners";
 import NewsSection from "../components/news/NewsSection";
 import newsApis from "@/apis/newsApis";
-import 'antd/dist/reset.css';
-import { Metadata } from 'next';
+import "antd/dist/reset.css";
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'AquaFox',
-  description: 'AquaFox - Your trusted partner in liquidity provision and high frequency trading',
+  title: "AquaFox",
+  description:
+    "AquaFox - Your trusted partner in liquidity provision and high frequency trading",
   openGraph: {
-    title: 'AquaFox',
-    description: 'AquaFox - Your trusted partner in liquidity provision and high frequency trading',
-    locale: 'en_US',
-    siteName: 'aquafox.io',
-    url: 'https://aquafox.io',
-    type: 'website'
+    title: "AquaFox",
+    description:
+      "AquaFox - Your trusted partner in liquidity provision and high frequency trading",
+    locale: "en_US",
+    siteName: "aquafox.io",
+    url: "https://aquafox.io",
+    type: "website",
   },
   twitter: {
-    card: 'summary',
-    title: 'AquaFox',
-    description: 'AquaFox - Your trusted partner in liquidity provision and high frequency trading',
-    site: '@Aquafoxjsc'
-  }
+    card: "summary",
+    title: "AquaFox",
+    description:
+      "AquaFox - Your trusted partner in liquidity provision and high frequency trading",
+    site: "@Aquafoxjsc",
+  },
 };
 
 export default async function Home() {
   const apiRs = await newsApis.getAllNews({
     page: 1,
-    limit: 6
+    limit: 6,
+    is_hot: true,
+    order_by: "created_at",
+    sort_by: "desc",
   });
 
   return (
@@ -46,7 +52,7 @@ export default async function Home() {
       <HighFrequencyTrading />
       <StatsSection />
       <Partners />
-      <NewsSection newsList={apiRs?.data?.data?.items || []}/>
+      <NewsSection newsList={apiRs?.data?.data?.items || []} />
       <Contact />
     </div>
   );
