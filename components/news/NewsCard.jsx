@@ -3,7 +3,6 @@ import dayjs from "dayjs";
 import { DAYJS_FORMAT_DATE_VN } from "@/constant/constants";
 import { arrowActionIcon } from "@/constant/svg";
 import Image from "next/image";
-import Link from "next/link";
 import LinkIndicator from "@/components/common/LinkIndicatior";
 
 export function NewsCard({ item }) {
