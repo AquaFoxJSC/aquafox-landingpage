@@ -11,6 +11,7 @@ const nextConfig = {
   images: {
     domains: [
       'aquafox-cms.s3.ap-southeast-1.amazonaws.com',
+      'aquafox-s3-bucket.s3.ap-southeast-1.amazonaws.com',
     ],
   },
 };
