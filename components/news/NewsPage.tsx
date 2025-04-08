@@ -61,7 +61,7 @@ function NewsPage(props: NewsPageProps) {
     <Menu
       items={[
         { label: "Latest News", key: "desc" },
-        { label: "Oldesrt News", key: "asc" },
+        { label: "Oldest News", key: "asc" },
       ]}
       onClick={(e) => onChange(e.key)} // Pass the selected key to the onChange function
     />
